@@ -1,0 +1,10 @@
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.csproj.AssemblyReference.cache
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.WinForm.resources
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.csproj.GenerateResource.cache
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\WinForm.exe.config
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\WinForm.exe
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\WinForm.pdb
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.exe
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.pdb
