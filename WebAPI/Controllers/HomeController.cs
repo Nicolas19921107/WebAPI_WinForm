@@ -20,17 +20,10 @@ namespace WebAPI.Controllers
         /// <response code="200">回傳成功</response>
         [HttpPost]
         [ResponseType(typeof(Human))]
-        //[Route("api/Home/ModelBindObj")]
+        [Route("api/Home/ModelBindObj")]
         public IHttpActionResult ModelBindObj(Human data)
         {
-            switch (Request.Content.Headers.ContentType.ToString())
-            {
-                case "application/x-www-form-urlencoded":
-                    return Ok(nameof(data.Name) + ":" + data.Name + ", " + nameof(data.Age) + ":" + data.Age);
-                default:
-                    break;
-            }
-            return Ok(data);
+          return Ok(nameof(data.Name) + ":" + data.Name + ", " + nameof(data.Age) + ":" + data.Age);
         }
 
         /// <summary>
@@ -90,14 +83,7 @@ namespace WebAPI.Controllers
         //[Route("api/Home/SimpleBinding")]
         public IHttpActionResult SimpleBinding([FromBody]Human data)
         {
-            switch (Request.Content.Headers.ContentType.ToString())
-            {
-                case "application/x-www-form-urlencoded":
-                    return Ok(nameof(data.Name) + ":" + data.Name + ", " + nameof(data.Age) + ":" + data.Age);
-                default:
-                    break;
-            }
-            return Ok(data);
+          return Ok(nameof(data.Name) + ":" + data.Name + ", " + nameof(data.Age) + ":" + data.Age);
         }
 
         /// <summary>
