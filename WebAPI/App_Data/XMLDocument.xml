@@ -481,18 +481,84 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:WebAPI.Controllers.HomeController.Get(System.Int32)">
+        <member name="M:WebAPI.Controllers.HomeController.ModelBindObj(WebAPI.Models.Human)">
             <summary>
-            Get 單一資料
+            ModelBindingObj
             </summary>
-            <param name="id"></param>
-            <returns></returns>
+            <remarks>測試 Obj 的 ModelBinding </remarks>
+            <param name="data">Human 內的 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
         </member>
-        <member name="M:WebAPI.Controllers.HomeController.Post(System.String,System.String)">
+        <member name="M:WebAPI.Controllers.HomeController.ModelBindingArray(WebAPI.Models.Human[])">
             <summary>
-            POST 單一資料
+            ModelBindingArray
             </summary>
-            <param name="value"></param>
+            <remarks>測試 Array 的 ModelBinding </remarks>
+            <param name="data">Human 類別，裡面有 Name 與 Age 屬性組成的陣列</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.HomeController.ModelBindingNestedObj(WebAPI.Models.Person)">
+            <summary>
+            ModelBindingNestedObj
+            </summary>
+            <remarks>測試 Obj 的 ModelBindingNestedArray </remarks>
+            <param name="data">Person 內有個 Friend 集合，裡面有 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.HomeController.ModelBindingArrayNestedObj(WebAPI.Models.Person[])">
+            <summary>
+            ModelBindingArrayNestedObj
+            </summary>
+            <remarks>測試 Obj 的 ModelBindingNestedArray </remarks>
+            <param name="data">Person 陣列，內有 Friend 集合，裡面有 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.HomeController.SimpleBinding(WebAPI.Models.Human)">
+            <summary>
+            SimpleBinding
+            </summary>
+            <remarks>測試 SimpleBinding </remarks>
+            <param name="data">Human 類別，裡面有 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.HomeController.SimpleModelBindArray(System.String[],System.Int32[])">
+            <summary>
+            SimpleModelBindArray
+            </summary>
+            <remarks>測試 Array 的 SimpleBinding </remarks>
+            <param name="data"> Name 與 Age 組成的陣列</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="T:WebAPI.Models.Human">
+            <summary>
+            Human 類別
+            </summary>
+        </member>
+        <member name="P:WebAPI.Models.Human.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:WebAPI.Models.Human.Age">
+            <summary>
+            年齡
+            </summary>
+        </member>
+        <member name="T:WebAPI.Models.Person">
+            <summary>
+            Person 類別:繼承 Human
+            </summary>
+        </member>
+        <member name="P:WebAPI.Models.Person.Friends">
+            <summary>
+            Friends 為 Person 的集合
+            </summary>
         </member>
     </members>
 </doc>

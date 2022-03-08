@@ -4,6 +4,7 @@ using WebAPI;
 using Swashbuckle.Application;
 using System;
 using System.Xml.XPath;
+using WebAPI.Models;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -178,6 +179,8 @@ namespace WebAPI
                         // alternative implementation for ISwaggerProvider with the CustomProvider option.
                         //
                         //c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
+
+                        c.OperationFilter<FromFormOperationFilter>();
                     })
                 .EnableSwaggerUi(c =>
                     {
