@@ -11,6 +11,22 @@ namespace WebAPI.Controllers
 {
     public class HomeController : ApiController
     {
+
+             /// <summary>
+        /// SimpleBinding
+        /// </summary>
+        /// <remarks>測試 SimpleBinding </remarks>
+        /// <param name="data">Human 類別，裡面有 Name 與 Age 屬性</param>
+        /// <returns>123</returns>
+        /// <response code="200">回傳成功</response>
+        [HttpPost]
+        [ResponseType(typeof(Human))]
+        //[Route("api/Home/SimpleBinding")]
+        public IHttpActionResult SimpleBinding([FromBody]Human data)
+        {
+          return Ok(nameof(data.Name) + ":" + data.Name + ", " + nameof(data.Age) + ":" + data.Age);
+        }
+
         /// <summary>
         /// ModelBindingObj
         /// </summary>
@@ -20,10 +36,38 @@ namespace WebAPI.Controllers
         /// <response code="200">回傳成功</response>
         [HttpPost]
         [ResponseType(typeof(Human))]
-        [Route("api/Home/ModelBindObj")]
+        //[Route("api/Home/ModelBindObj")]
         public IHttpActionResult ModelBindObj(Human data)
         {
-          return Ok(nameof(data.Name) + ":" + data.Name + ", " + nameof(data.Age) + ":" + data.Age);
+          return Json(data);
+        }
+
+        /// <summary>
+        /// SimpleModelBindArray
+        /// </summary>
+        /// <remarks>測試 Array 的 SimpleBinding </remarks>
+        /// <param name="data"> Name 與 Age 組成的陣列</param>
+        /// <returns>123</returns>
+        /// <response code="200">回傳成功</response>
+        [HttpPost]
+        //[Route("api/Home/SimpleModelBindArray")]
+        public IHttpActionResult SimpleModelBindArray([FromBody] string[] Name, [FromUri] int[] Age)
+        {
+            string str = nameof(Name) + ":";
+            foreach (string n in Name)
+            {
+                str += n + ",";
+            }
+            str = str.Substring(0, str.Length - 1);
+            str += " | ";
+            str += nameof(Age) + ":";
+            foreach (int a in Age)
+            {
+                str += a + ",";
+            }
+            str = str.Substring(0, str.Length - 1);
+            return Ok(str);
+
         }
 
         /// <summary>
@@ -38,7 +82,7 @@ namespace WebAPI.Controllers
         //[Route("api/Home/ModelBindingArray")]
         public IHttpActionResult ModelBindingArray(Human[] data)
         {
-            return Ok(data);
+            return Json(data);
         }
 
         /// <summary>
@@ -53,7 +97,7 @@ namespace WebAPI.Controllers
         //[Route("api/Home/ModelBindingNestedObj")]
         public IHttpActionResult ModelBindingNestedObj(Person data)
         {
-            return Ok(data);
+            return Json(data);
         }
 
         /// <summary>
@@ -71,48 +115,5 @@ namespace WebAPI.Controllers
             return Ok(data);
         }
 
-        /// <summary>
-        /// SimpleBinding
-        /// </summary>
-        /// <remarks>測試 SimpleBinding </remarks>
-        /// <param name="data">Human 類別，裡面有 Name 與 Age 屬性</param>
-        /// <returns>123</returns>
-        /// <response code="200">回傳成功</response>
-        [HttpPost]
-        [ResponseType(typeof(Human))]
-        //[Route("api/Home/SimpleBinding")]
-        public IHttpActionResult SimpleBinding([FromBody]Human data)
-        {
-          return Ok(nameof(data.Name) + ":" + data.Name + ", " + nameof(data.Age) + ":" + data.Age);
-        }
-
-        /// <summary>
-        /// SimpleModelBindArray
-        /// </summary>
-        /// <remarks>測試 Array 的 SimpleBinding </remarks>
-        /// <param name="data"> Name 與 Age 組成的陣列</param>
-        /// <returns>123</returns>
-        /// <response code="200">回傳成功</response>
-        [HttpPost]
-        //[Route("api/Home/SimpleModelBindArray")]
-        public IHttpActionResult SimpleModelBindArray([FromUri]string[] Name,int[] Age)
-        {
-            string str = nameof(Name) + ":";
-            foreach (string n in Name)
-            {
-                str += n + ",";
-            }
-            str = str.Substring(0, str.Length - 1);
-            str += " | ";
-            str += nameof(Age) + ":";
-            foreach (int a in Age)
-            {
-                str += a + ",";
-            }
-            str = str.Substring(0, str.Length - 1);
-            return Ok(str);
-        }
-
-
-    }
+     }
 }

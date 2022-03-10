@@ -19,11 +19,11 @@ namespace WebAPI
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-                name: "post",
-                url: "api/{controller}/{action}",
-                defaults: new { action =UrlParameter.Optional }
-            );
+            //routes.MapRoute(
+            //    name: "post",
+            //    url: "api/{controller}/{action}",
+            //    defaults: new { action = UrlParameter.Optional }
+            //);
         }
     }
 }
