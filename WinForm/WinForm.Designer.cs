@@ -44,7 +44,7 @@ namespace WinForm
         private System.Windows.Forms.Label ModelBindObjTitle;
         private System.Windows.Forms.Label ModelBindingArrayTitle;
         private System.Windows.Forms.Label ModelBindingNestedObjTitle;
-        private System.Windows.Forms.Label SimpleModelBindingTitle;
+        private System.Windows.Forms.Label SimpleModelBindArrayTitle;
         private System.Windows.Forms.Label ModelBindingArrayNestedObjTitle;
         private System.Windows.Forms.TextBox ModelBindObjJSON;
         private System.Windows.Forms.Label label2;
@@ -68,7 +68,7 @@ namespace WinForm
         private System.Windows.Forms.TextBox ModelBindingArrayNestedObjURL;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox SimpleModelBindingJSON;
-        private System.Windows.Forms.TextBox SimpleModelBindingURL;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayJSON;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayURL;
     }
 }

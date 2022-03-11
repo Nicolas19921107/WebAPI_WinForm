@@ -1,16 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Net.Http;
-using Newtonsoft.Json;
+using System.Text;
+using System.Windows.Forms;
 using WebAPI.Models;
-
 namespace WinForm
 {
     public partial class WinForm : Form
@@ -42,7 +38,7 @@ namespace WinForm
             this.ModelBindObjTitle = new System.Windows.Forms.Label();
             this.ModelBindingArrayTitle = new System.Windows.Forms.Label();
             this.ModelBindingNestedObjTitle = new System.Windows.Forms.Label();
-            this.SimpleModelBindingTitle = new System.Windows.Forms.Label();
+            this.SimpleModelBindArrayTitle = new System.Windows.Forms.Label();
             this.ModelBindingArrayNestedObjTitle = new System.Windows.Forms.Label();
             this.ModelBindObjJSON = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,8 +62,8 @@ namespace WinForm
             this.ModelBindingArrayNestedObjURL = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.SimpleModelBindingJSON = new System.Windows.Forms.TextBox();
-            this.SimpleModelBindingURL = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayJSON = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayURL = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -220,16 +216,17 @@ namespace WinForm
             this.ModelBindingNestedObjTitle.Text = "ModelBindingNestedObj";
             this.ModelBindingNestedObjTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SimpleModelBindingTitle
+            // SimpleModelBindArrayTitle
             // 
-            this.SimpleModelBindingTitle.BackColor = System.Drawing.Color.Orange;
-            this.SimpleModelBindingTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SimpleModelBindingTitle.Location = new System.Drawing.Point(14, 585);
-            this.SimpleModelBindingTitle.Name = "SimpleModelBindingTitle";
-            this.SimpleModelBindingTitle.Size = new System.Drawing.Size(185, 200);
-            this.SimpleModelBindingTitle.TabIndex = 30;
-            this.SimpleModelBindingTitle.Text = "SimpleModelBinding";
-            this.SimpleModelBindingTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SimpleModelBindArrayTitle.BackColor = System.Drawing.Color.Orange;
+            this.SimpleModelBindArrayTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayTitle.Location = new System.Drawing.Point(15, 586);
+            this.SimpleModelBindArrayTitle.Name = "SimpleModelBindArrayTitle";
+            this.SimpleModelBindArrayTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SimpleModelBindArrayTitle.Size = new System.Drawing.Size(185, 200);
+            this.SimpleModelBindArrayTitle.TabIndex = 30;
+            this.SimpleModelBindArrayTitle.Text = "SimpleModelBindArray";
+            this.SimpleModelBindArrayTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ModelBindingArrayNestedObjTitle
             // 
@@ -496,35 +493,35 @@ namespace WinForm
             this.label10.Text = "Urlencoded";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SimpleModelBindingJSON
+            // SimpleModelBindArrayJSON
             // 
-            this.SimpleModelBindingJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SimpleModelBindingJSON.Location = new System.Drawing.Point(328, 688);
-            this.SimpleModelBindingJSON.Multiline = true;
-            this.SimpleModelBindingJSON.Name = "SimpleModelBindingJSON";
-            this.SimpleModelBindingJSON.ReadOnly = true;
-            this.SimpleModelBindingJSON.Size = new System.Drawing.Size(269, 97);
-            this.SimpleModelBindingJSON.TabIndex = 54;
-            this.SimpleModelBindingJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SimpleModelBindArrayJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayJSON.Location = new System.Drawing.Point(328, 688);
+            this.SimpleModelBindArrayJSON.Multiline = true;
+            this.SimpleModelBindArrayJSON.Name = "SimpleModelBindArrayJSON";
+            this.SimpleModelBindArrayJSON.ReadOnly = true;
+            this.SimpleModelBindArrayJSON.Size = new System.Drawing.Size(269, 97);
+            this.SimpleModelBindArrayJSON.TabIndex = 54;
+            this.SimpleModelBindArrayJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // SimpleModelBindingURL
+            // SimpleModelBindArrayURL
             // 
-            this.SimpleModelBindingURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SimpleModelBindingURL.Location = new System.Drawing.Point(328, 585);
-            this.SimpleModelBindingURL.Multiline = true;
-            this.SimpleModelBindingURL.Name = "SimpleModelBindingURL";
-            this.SimpleModelBindingURL.ReadOnly = true;
-            this.SimpleModelBindingURL.Size = new System.Drawing.Size(269, 97);
-            this.SimpleModelBindingURL.TabIndex = 53;
-            this.SimpleModelBindingURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SimpleModelBindArrayURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayURL.Location = new System.Drawing.Point(328, 585);
+            this.SimpleModelBindArrayURL.Multiline = true;
+            this.SimpleModelBindArrayURL.Name = "SimpleModelBindArrayURL";
+            this.SimpleModelBindArrayURL.ReadOnly = true;
+            this.SimpleModelBindArrayURL.Size = new System.Drawing.Size(269, 97);
+            this.SimpleModelBindArrayURL.TabIndex = 53;
+            this.SimpleModelBindArrayURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // WinForm
             // 
             this.ClientSize = new System.Drawing.Size(1224, 808);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.SimpleModelBindingJSON);
-            this.Controls.Add(this.SimpleModelBindingURL);
+            this.Controls.Add(this.SimpleModelBindArrayJSON);
+            this.Controls.Add(this.SimpleModelBindArrayURL);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ModelBindingArrayNestedObjJSON);
@@ -546,7 +543,7 @@ namespace WinForm
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ModelBindObjJSON);
             this.Controls.Add(this.ModelBindingArrayNestedObjTitle);
-            this.Controls.Add(this.SimpleModelBindingTitle);
+            this.Controls.Add(this.SimpleModelBindArrayTitle);
             this.Controls.Add(this.ModelBindingNestedObjTitle);
             this.Controls.Add(this.ModelBindingArrayTitle);
             this.Controls.Add(this.ModelBindObjTitle);
@@ -576,9 +573,9 @@ namespace WinForm
             string[] AgeInput = { AgeOne.Text, AgeTwo.Text, AgeThr.Text, AgeFour.Text };
             List<string> Name = new List<string>();
             List<string> Age = new List<string>();
-            for(int i=0;i<NameInput.Length;i++)
+            for (int i = 0; i < NameInput.Length; i++)
             {
-                if(!string.IsNullOrEmpty(NameInput[i])&&!string.IsNullOrEmpty(AgeInput[i]))
+                if (!string.IsNullOrEmpty(NameInput[i]) && !string.IsNullOrEmpty(AgeInput[i]))
                 {
                     Name.Add(NameInput[i]);
                     Age.Add(AgeInput[i]);
@@ -589,165 +586,137 @@ namespace WinForm
                 }
             }
 
-     
-            //SimpleBinding
-            SimpleBinding(CreateNewDic(Name, Age),DoFunc);
 
-            //ModelBinObj
-            ModelBindObj(Name, Age,DoFunc);
+            ////SimpleBinding
+            //SimpleBinding(DoFunc.CreateNewDic(Name, Age, 1), DoFunc);
+
+            ////ModelBinObj
+            //ModelBindObj(DoFunc.CreateNewDic(Name, Age, 1), DoFunc);
 
             ////SimpleModelBindArray
-            //SimpleModelBindingArray(CreateNewDic(Name, Age), Age);
+            //SimpleModelBindingArray(Name, Age, DoFunc);
 
             ////ModelBindingArray
-            //ModelBindingArray(Name, Age);
+            ModelBindingArray(Name, Age, DoFunc);
 
-            ////ModelBindingNestedObj
-            //ModelBindingNestedObj(Name, Age);
+            //////ModelBindingNestedObj
+            //ModelBindingNestedObj(Name, Age, DoFunc);
 
-            ////ModelBindingArrayNestedObj
-            //ModelBindingArrayNestedObj(Name, Age);
+            //////ModelBindingArrayNestedObj
+            //ModelBindingArrayNestedObj(Name, Age, DoFunc);
 
 
         }
 
-        private async void SimpleBinding(Dictionary<string,string> formDataDic,ForFunc DoFunc)
+        private async void SimpleBinding(Dictionary<string, string> formDataDic, ForFunc DoFunc)
         {
-
-                try
-                {
-                    //client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "application/x-www-form-urlencoded");
-                    //var formData = new FormUrlEncodedContent(formDataDic);
-                    //HttpResponseMessage responseSimpleModelBinding = await client.PostAsync("https://localhost:44376/api/Home/SimpleBinding", formData);
-                    //responseSimpleModelBinding.EnsureSuccessStatusCode();
-                    //string ResponseBodySimpleModelBinding = await responseSimpleModelBinding.Content.ReadAsStringAsync();
-                    Uri BaseURL=new Uri("https://localhost:44376/api/Home/SimpleBinding");
-                    SimpleBindingURL.Text = await DoFunc.SendinUrlEncoded(formDataDic,BaseURL);
-
-
-                    //Human data = new Human();
-                    //data.Name = formDataDic["Name"];
-                    //data.Age = Int32.Parse(formDataDic["Age"]);
-                    //string JSON = JsonConvert.SerializeObject(data);
-                    //HttpContent PostContentModelBindObj = new StringContent(JSON, Encoding.UTF8, "application/json");
-                    //HttpResponseMessage responseModelBindObj = await client.PostAsync("https://localhost:44376/api/Home/SimpleBinding", PostContentModelBindObj);
-                    //responseModelBindObj.EnsureSuccessStatusCode();
-                    //string ResponseBodyModelBindObj = await responseModelBindObj.Content.ReadAsStringAsync();
-                    //SimpleBindingJSON.Text = ResponseBodyModelBindObj;
-                }
-                catch (Exception error)
-                {
-                    Console.WriteLine("{0}", error.Message);
-                }
-        
-        }
-
-        private async void ModelBindObj(List<string> Name, List<string> Age, ForFunc DoFunc)
-        {   
-            using(HttpClient client =new HttpClient())
+            try
             {
-                try
-                {
-                    Human data = new Human();
-                    data.Name = Name[0];
-                    data.Age = Int32.Parse(Age[0]);
-                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindObj");
-                    ModelBindObjJSON.Text = await DoFunc.SendinJSON(data, BaseURL);
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleBinding");
+                SimpleBindingURL.Text = await DoFunc.SendinUrlEncoded(formDataDic, BaseURL);
 
-                    //Human data = new Human();
-                    //data.Name = Name;
-                    //data.Age = Int32.Parse(Age);
-                    //string JSON = JsonConvert.SerializeObject(data);
-                    //HttpContent PostContentModelBindObj = new StringContent(JSON, Encoding.UTF8, "application/json");
-                    //HttpResponseMessage responseModelBindObj = await client.PostAsync("https://localhost:44376/api/Home/ModelBindObj", PostContentModelBindObj);
-                    //responseModelBindObj.EnsureSuccessStatusCode();
-                    //string ResponseBodyModelBindObj = await responseModelBindObj.Content.ReadAsStringAsync();
-                    //ModelBindObjJSON.Text = ResponseBodyModelBindObj;
-                }
-                catch (Exception error)
-                {
-                    Console.WriteLine("{0}", error.Message);
-                }
+                Human data = new Human();
+                data.Name = formDataDic["Name"];
+                data.Age = Int32.Parse(formDataDic["Age"]);
+                SimpleBindingJSON.Text = await DoFunc.SendinJSON(data, BaseURL);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
             }
         }
 
-        private async void SimpleModelBindingArray(Dictionary<string, string> formDataDic,List<string>Age)
+        private async void ModelBindObj(Dictionary<string, string> formDataDic, ForFunc DoFunc)
         {
-            using(HttpClient client=new HttpClient())
+            try
             {
-                try
-                {
-                    string param = "";
-                    for (int i = 0; i < Age.Count; i++)
-                    {
-                        param += $"Age[]={Age[i]}";
-                    }
-                    var formData = new FormUrlEncodedContent(formDataDic);
-                    //string param = $"Age[]={Age[0]}&Age[]={Age[1]}";
-                    HttpResponseMessage responseSimpleModelBindArray = await client.PostAsync("https://localhost:44376/api/Home/SimpleModelBindArray?" + param, formData);
-                    responseSimpleModelBindArray.EnsureSuccessStatusCode();
-                    string ResponseBodySimpleModelBindArray = await responseSimpleModelBindArray.Content.ReadAsStringAsync();
-                    SimpleModelBindingURL.Text = ResponseBodySimpleModelBindArray;
-                }
-                catch (Exception error)
-                {
-                    Console.WriteLine("{0}", error.Message);
-                }
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindObj");
+                ModelBindObjURL.Text = await DoFunc.SendinUrlEncoded(formDataDic, BaseURL);
+
+                Human data = new Human();
+                data.Name = formDataDic["Name"];
+                data.Age = Int32.Parse(formDataDic["Age"]);
+                ModelBindObjJSON.Text = await DoFunc.SendinJSON(data, BaseURL);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
             }
 
         }
 
-        private async void ModelBindingArray(List<string>Name,List<string> Age)
+        // 待解
+        private async void SimpleModelBindingArray(List<string> Name, List<string> Age, ForFunc DoFunc)
         {
-            using(HttpClient client=new HttpClient())
+
+            try
             {
-                try
-                {
-                    List<Human> dataList = new List<Human>();
-                    for (int i = 0; i < Name.Count; i++)
-                    {
-                        Human T = new Human();
-                        T.Name = Name[i];
-                        T.Age = Int32.Parse(Age[i]);
-                        dataList.Add(T);
-                    }
-                    var JSON = JsonConvert.SerializeObject(dataList);
-                    HttpContent PostContentModelBindingArray = new StringContent(JSON, Encoding.UTF8, "application/json");
-                    HttpResponseMessage responseModelBindingArray = await client.PostAsync("https://localhost:44376/api/Home/ModelBindingArray", PostContentModelBindingArray);
-                    responseModelBindingArray.EnsureSuccessStatusCode();
-                    string ResponseBodyModelBindingArray = await responseModelBindingArray.Content.ReadAsStringAsync();
-                    ModelBindingArrayJSON.Text = ResponseBodyModelBindingArray;
-                }
-                catch (Exception error)
-                {
-                    Console.WriteLine("{0}", error.Message);
-                }
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray?" + DoFunc.QueryString(Age));
+                SimpleModelBindArrayURL.Text = await DoFunc.SendinUrlEncoded(DoFunc.CreateNewDic(Name, Age, 2), BaseURL);
+
+
+                SimpleModelBindArrayJSON.Text = await DoFunc.SendinJSON(Name, BaseURL);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
             }
         }
 
-        private async void ModelBindingNestedObj(List<string> Name, List<string> Age)
+        private async void ModelBindingArray(List<string> Name, List<string> Age, ForFunc DoFunc)
+        {
+            try
+            {
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
+                List<Human> DataList = new List<Human>();
+                for (int i = 0; i < Name.Count; i++)
+                {
+                    Human Data = new Human();
+                    Data.Name = Name[i];
+                    Data.Age = Int32.Parse(Age[i]);
+                    DataList.Add(Data);
+                };
+                Human DataE = new Human();
+                DataE.Name = Name[0];
+                DataE.Age =Int32.Parse(Age[0]);
+                var content = new Dictionary<string, string>
+                {
+                    {"", JsonConvert.SerializeObject(DataE)}
+                };
+
+                ModelBindingArrayURL.Text = await DoFunc.PosttoBack(new FormUrlEncodedContent(content), BaseURL);
+                //ModelBindingArrayURL.Text = await DoFunc.SendinUrlEncoded(TEST, BaseURL);
+                //ModelBindingArrayJSON.Text = await DoFunc.SendinJSON(DataList, BaseURL);
+
+                //DoFunc.QueryString(Name, Age);
+
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
+            }
+
+        }
+
+        private async void ModelBindingNestedObj(List<string> Name, List<string> Age,ForFunc DoFunc)
         {
             using (HttpClient client = new HttpClient())
             {
                 try
                 {
-                    Person dataP = new Person();
-                    List<Person> F = new List<Person>();
+                    Person DataList = new Person();
+                    List<Person> Data = new List<Person>();
                     for (int i = 0; i < Name.Count; i++)
                     {
                         Person Friends = new Person();
                         Friends.Name = Name[i];
                         Friends.Age = Int32.Parse(Age[i]);
-                        F.Add(Friends);
-                        dataP.Friends = F;
+                        Data.Add(Friends);
+                        DataList.Friends = Data;
                     }
 
-                    var JSON = JsonConvert.SerializeObject(dataP);
-                    HttpContent PostContentModelBindingNestedObj = new StringContent(JSON, Encoding.UTF8, "application/json");
-                    HttpResponseMessage responseModelBindingNestedObj = await client.PostAsync("https://localhost:44376/api/Home/ModelBindingNestedObj", PostContentModelBindingNestedObj);
-                    responseModelBindingNestedObj.EnsureSuccessStatusCode();
-                    string ResponseBodyModelBindingNestedObj = await responseModelBindingNestedObj.Content.ReadAsStringAsync();
-                    ModelBindingNestedObjJSON.Text = ResponseBodyModelBindingNestedObj;
+                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
+                    ModelBindingNestedObjJSON.Text = await DoFunc.SendinJSON(DataList, BaseURL);
                 }
                 catch (Exception error)
                 {
@@ -756,68 +725,30 @@ namespace WinForm
             }
         }
 
-        private async void ModelBindingArrayNestedObj(List<string> Name, List<string> Age)
+        private async void ModelBindingArrayNestedObj(List<string> Name, List<string> Age,ForFunc DoFunc)
         {
-            using (HttpClient client = new HttpClient())
-            {
                 try
                 {
-                    List<Person> A = new List<Person>();
-                    List<Person> F = new List<Person>();
-                    Person dataQ = new Person();
+                    List<Person> DataListA = new List<Person>();
+                    List<Person> DataListF = new List<Person>();
+                    Person Data = new Person();
                     for (int i = 0; i < Name.Count; i++)
                     {
                         Person Friends = new Person();
                         Friends.Name = Name[i];
                         Friends.Age = Int32.Parse(Age[i]);
-                        F.Add(Friends);
-                        dataQ.Friends = F;
+                        DataListF.Add(Friends);
+                        Data.Friends = DataListF;
                     }
-                    A.Add(dataQ);
-                    var JSON = JsonConvert.SerializeObject(A);
-                    HttpContent PostContentModelBindingArrayNestedObj = new StringContent(JSON, Encoding.UTF8, "application/json");
-                    HttpResponseMessage responseModelBindingArrayNestedObj = await client.PostAsync("https://localhost:44376/api/Home/ModelBindingArrayNestedObj", PostContentModelBindingArrayNestedObj);
-                    responseModelBindingArrayNestedObj.EnsureSuccessStatusCode();
-                    string ResponseBodyModelBindingArrayNestedObj = await responseModelBindingArrayNestedObj.Content.ReadAsStringAsync();
-                    ModelBindingArrayNestedObjJSON.Text = ResponseBodyModelBindingArrayNestedObj;
-                }
+                    DataListA.Add(Data);
+                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
+                    ModelBindingArrayNestedObjJSON.Text = await DoFunc.SendinJSON(DataListA, BaseURL);;
+            }
                 catch (Exception error)
                 {
                     Console.WriteLine("{0}", error.Message);
                 }
-            }
         }
-
-        private string ArrayHandle(List<string> Name)
-        {
-            string NameArr = "";
-            foreach (var item in Name)
-            {
-                NameArr += item + ",";
-            }
-            return NameArr;
-        }
-        private Dictionary<string, string> CreateNewDic(List<string> Name, List<string> Age)
-        {
-            if (Name.Count > 1)
-            {
-                Dictionary<string, string> formDataDic = new Dictionary<string, string>()
-                {
-                    [""] = ArrayHandle(Name),
-                };
-                return formDataDic;
-            }
-            else
-            {
-                Dictionary<string, string> formDataDic = new Dictionary<string, string>()
-                {
-                    [nameof(Name)] = Name[0],
-                    [nameof(Age)] = Age[0],
-                };
-                return formDataDic;
-            }
-        }
-
 
 
 

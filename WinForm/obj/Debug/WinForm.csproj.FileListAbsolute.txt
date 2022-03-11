@@ -44,3 +44,4 @@ D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\zh-Hant\System.Web.Web
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\zh-Hant\System.Web.Razor.resources.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\zh-Hant\System.Web.WebPages.Deployment.resources.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.exe.config
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.csproj.CopyComplete

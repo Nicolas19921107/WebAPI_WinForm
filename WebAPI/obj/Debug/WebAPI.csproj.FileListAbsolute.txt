@@ -88,10 +88,10 @@ D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\zh-Hant\System.Web.Razor.reso
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\zh-Hant\System.Web.WebPages.resources.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
-D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.AssemblyReference.cache
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\obj\Debug\WebAPI.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\XMLDocument.xml
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\Swashbuckle.Core.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\WebActivatorEx.dll
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.AssemblyReference.cache
