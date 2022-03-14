@@ -2,7 +2,9 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Windows.Forms;
@@ -569,6 +571,7 @@ namespace WinForm
         private async void button1_Click(object sender, EventArgs e)
         {
             ForFunc DoFunc = new ForFunc();
+            WebClientHandle WebClientFunc = new WebClientHandle();
             string[] NameInput = { NameOne.Text, NameTwo.Text, NameThr.Text, NameFour.Text };
             string[] AgeInput = { AgeOne.Text, AgeTwo.Text, AgeThr.Text, AgeFour.Text };
             List<string> Name = new List<string>();
@@ -589,36 +592,64 @@ namespace WinForm
 
             ////SimpleBinding
             //SimpleBinding(DoFunc.CreateNewDic(Name, Age, 1), DoFunc);
+            SimpleBinding(Name[0],Age[0], DoFunc, WebClientFunc);
+
 
             ////ModelBinObj
             //ModelBindObj(DoFunc.CreateNewDic(Name, Age, 1), DoFunc);
+            ModelBindObj(Name[0], Age[0], DoFunc, WebClientFunc);
+
 
             ////SimpleModelBindArray
             //SimpleModelBindingArray(Name, Age, DoFunc);
+            SimpleModelBindingArray(Name, Age, DoFunc, WebClientFunc);
+
 
             ////ModelBindingArray
-            ModelBindingArray(Name, Age, DoFunc);
+            //ModelBindingArray(Name, Age, DoFunc);
+            ModelBindingArray(Name, Age, DoFunc, WebClientFunc);
 
             //////ModelBindingNestedObj
             //ModelBindingNestedObj(Name, Age, DoFunc);
+            ModelBindingNestedObj(Name, Age, DoFunc, WebClientFunc);
+
 
             //////ModelBindingArrayNestedObj
             //ModelBindingArrayNestedObj(Name, Age, DoFunc);
-
+            ModelBindingArrayNestedObj(Name, Age, DoFunc, WebClientFunc);
 
         }
 
-        private async void SimpleBinding(Dictionary<string, string> formDataDic, ForFunc DoFunc)
+        private void SimpleBinding(string Name,string Age, ForFunc DoFunc,WebClientHandle WebClientFunc)
         {
+            //try
+            //{
+            //    Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleBinding");
+            //    SimpleBindingURL.Text =DoFunc.SendinUrlEncoded(formDataDic, BaseURL).GetAwaiter().GetResult();
+
+            //    Human data = new Human();
+            //    data.Name = formDataDic["Name"];
+            //    data.Age = Int32.Parse(formDataDic["Age"]);
+            //    SimpleBindingJSON.Text = DoFunc.SendinJSON(data, BaseURL).GetAwaiter().GetResult();
+            //}
+            //catch (Exception error)
+            //{
+            //    Console.WriteLine("{0}", error.Message);
+            //}
             try
             {
-                Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleBinding");
-                SimpleBindingURL.Text = await DoFunc.SendinUrlEncoded(formDataDic, BaseURL);
+                using(WebClient client=new WebClient())
+                {
+                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleBinding");
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
+                    string PostData= WebClientFunc.QueryString(Name, Age);
+                    SimpleBindingURL.Text = client.UploadString(BaseURL, PostData);
 
-                Human data = new Human();
-                data.Name = formDataDic["Name"];
-                data.Age = Int32.Parse(formDataDic["Age"]);
-                SimpleBindingJSON.Text = await DoFunc.SendinJSON(data, BaseURL);
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    Human PostDataJSON = new Human() { Name = Name, Age = Int32.Parse(Age) };
+                    SimpleBindingJSON.Text = client.UploadString(BaseURL, JsonConvert.SerializeObject(PostDataJSON));
+                }
+            
             }
             catch (Exception error)
             {
@@ -626,17 +657,35 @@ namespace WinForm
             }
         }
 
-        private async void ModelBindObj(Dictionary<string, string> formDataDic, ForFunc DoFunc)
+        private void ModelBindObj(string Name,string Age, ForFunc DoFunc,WebClientHandle WebClientFunc)
         {
+            //try
+            //{
+            //    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindObj");
+            //    ModelBindObjURL.Text = DoFunc.SendinUrlEncoded(formDataDic, BaseURL).GetAwaiter().GetResult(); ;
+
+            //    Human data = new Human();
+            //    data.Name = formDataDic["Name"];
+            //    data.Age = Int32.Parse(formDataDic["Age"]);
+            //    ModelBindObjJSON.Text = DoFunc.SendinJSON(data, BaseURL).GetAwaiter().GetResult(); ;
+            //}
+            //catch (Exception error)
+            //{
+            //    Console.WriteLine("{0}", error.Message);
+            //}
             try
             {
-                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindObj");
-                ModelBindObjURL.Text = await DoFunc.SendinUrlEncoded(formDataDic, BaseURL);
+                using (WebClient client = new WebClient())
+                {
+                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindObj");
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
+                    string PostData = WebClientFunc.QueryString(Name, Age);
+                    ModelBindObjURL.Text = client.UploadString(BaseURL, PostData);
 
-                Human data = new Human();
-                data.Name = formDataDic["Name"];
-                data.Age = Int32.Parse(formDataDic["Age"]);
-                ModelBindObjJSON.Text = await DoFunc.SendinJSON(data, BaseURL);
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    Human PostDataJSON = new Human() { Name = Name, Age = Int32.Parse(Age) };
+                    ModelBindObjJSON.Text = client.UploadString(BaseURL, JsonConvert.SerializeObject(PostDataJSON));
+                }
             }
             catch (Exception error)
             {
@@ -646,16 +695,37 @@ namespace WinForm
         }
 
         // 待解
-        private async void SimpleModelBindingArray(List<string> Name, List<string> Age, ForFunc DoFunc)
+        private void SimpleModelBindingArray(List<string> Name, List<string> Age, ForFunc DoFunc,WebClientHandle WebClientFunc)
         {
+
+            //try
+            //{
+            //    Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray?" + DoFunc.QueryString(Age));
+            //    SimpleModelBindArrayURL.Text = DoFunc.SendinUrlEncoded(DoFunc.CreateNewDic(Name, Age, 2), BaseURL).GetAwaiter().GetResult();
+
+
+            //    SimpleModelBindArrayJSON.Text = DoFunc.SendinJSON(Name, BaseURL).GetAwaiter().GetResult();
+            //}
+            //catch (Exception error)
+            //{
+            //    Console.WriteLine("{0}", error.Message);
+            //}
 
             try
             {
-                Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray?" + DoFunc.QueryString(Age));
-                SimpleModelBindArrayURL.Text = await DoFunc.SendinUrlEncoded(DoFunc.CreateNewDic(Name, Age, 2), BaseURL);
+                using (WebClient client = new WebClient())
+                {
+                    string PostData = WebClientFunc.QueryStringComplex(Name, Age,"SimpleModelBindingArray");
+                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray?"+PostData);
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
+                    SimpleModelBindArrayURL.Text = client.UploadString(BaseURL, PostData);
 
-
-                SimpleModelBindArrayJSON.Text = await DoFunc.SendinJSON(Name, BaseURL);
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    dynamic Data = new ExpandoObject();
+                    Data.Name = Name;
+                    Data.Age = Age;
+                    SimpleModelBindArrayJSON.Text = client.UploadString(BaseURL, JsonConvert.SerializeObject(Data));
+                }
             }
             catch (Exception error)
             {
@@ -663,60 +733,97 @@ namespace WinForm
             }
         }
 
-        private async void ModelBindingArray(List<string> Name, List<string> Age, ForFunc DoFunc)
+        private void ModelBindingArray(List<string> Name, List<string> Age, ForFunc DoFunc,WebClientHandle WebClientFunc)
         {
+            //try
+            //{
+            //    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
+            //    List<Human> DataList = new List<Human>();
+            //    for (int i = 0; i < Name.Count; i++)
+            //    {
+            //        Human Data = new Human();
+            //        Data.Name = Name[i];
+            //        Data.Age = Int32.Parse(Age[i]);
+            //        DataList.Add(Data);
+            //    };
+            //    Human DataE = new Human();
+            //    DataE.Name = Name[0];
+            //    DataE.Age =Int32.Parse(Age[0]);
+            //    var content = new Dictionary<string, string>
+            //    {
+            //        {"", JsonConvert.SerializeObject(DataE)}
+            //    };
+
+            //    ModelBindingArrayURL.Text = DoFunc.PosttoBack(new FormUrlEncodedContent(content), BaseURL).GetAwaiter().GetResult();
+            //    //ModelBindingArrayURL.Text = await DoFunc.SendinUrlEncoded(TEST, BaseURL);
+            //    //ModelBindingArrayJSON.Text = await DoFunc.SendinJSON(DataList, BaseURL);
+
+            //    //DoFunc.QueryString(Name, Age);
+
+            //}
+            //catch (Exception error)
+            //{
+            //    Console.WriteLine("{0}", error.Message);
+            //}
+
             try
             {
-                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
-                List<Human> DataList = new List<Human>();
-                for (int i = 0; i < Name.Count; i++)
+                using (WebClient client = new WebClient())
                 {
-                    Human Data = new Human();
-                    Data.Name = Name[i];
-                    Data.Age = Int32.Parse(Age[i]);
-                    DataList.Add(Data);
-                };
-                Human DataE = new Human();
-                DataE.Name = Name[0];
-                DataE.Age =Int32.Parse(Age[0]);
-                var content = new Dictionary<string, string>
-                {
-                    {"", JsonConvert.SerializeObject(DataE)}
-                };
+                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
+                    string PostData = WebClientFunc.QueryStringComplex(Name, Age,"ModelBindingArray");
+                    ModelBindingArrayURL.Text = client.UploadString(BaseURL, PostData);
 
-                ModelBindingArrayURL.Text = await DoFunc.PosttoBack(new FormUrlEncodedContent(content), BaseURL);
-                //ModelBindingArrayURL.Text = await DoFunc.SendinUrlEncoded(TEST, BaseURL);
-                //ModelBindingArrayJSON.Text = await DoFunc.SendinJSON(DataList, BaseURL);
-
-                //DoFunc.QueryString(Name, Age);
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    string PostDataJSON = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingArrayJSON");
+                    ModelBindingArrayJSON.Text = client.UploadString(BaseURL, PostDataJSON);
+                }
 
             }
             catch (Exception error)
             {
                 Console.WriteLine("{0}", error.Message);
             }
-
         }
 
-        private async void ModelBindingNestedObj(List<string> Name, List<string> Age,ForFunc DoFunc)
+        private void ModelBindingNestedObj(List<string> Name, List<string> Age,ForFunc DoFunc, WebClientHandle WebClientFunc)
         {
-            using (HttpClient client = new HttpClient())
+            //using (HttpClient client = new HttpClient())
+            //{
+            //    try
+            //    {
+            //        Person DataList = new Person();
+            //        List<Person> Data = new List<Person>();
+            //        for (int i = 0; i < Name.Count; i++)
+            //        {
+            //            Person Friends = new Person();
+            //            Friends.Name = Name[i];
+            //            Friends.Age = Int32.Parse(Age[i]);
+            //            Data.Add(Friends);
+            //            DataList.Friends = Data;
+            //        }
+
+            //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
+            //        ModelBindingNestedObjJSON.Text = DoFunc.SendinJSON(DataList, BaseURL).GetAwaiter().GetResult();
+            //    }
+            //    catch (Exception error)
+            //    {
+            //        Console.WriteLine("{0}", error.Message);
+            //    }
+            //}
+            using (WebClient client = new WebClient())
             {
                 try
                 {
-                    Person DataList = new Person();
-                    List<Person> Data = new List<Person>();
-                    for (int i = 0; i < Name.Count; i++)
-                    {
-                        Person Friends = new Person();
-                        Friends.Name = Name[i];
-                        Friends.Age = Int32.Parse(Age[i]);
-                        Data.Add(Friends);
-                        DataList.Friends = Data;
-                    }
-
                     Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
-                    ModelBindingNestedObjJSON.Text = await DoFunc.SendinJSON(DataList, BaseURL);
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
+                    string PostData = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingNestedObj");
+                    ModelBindingNestedObjURL.Text = client.UploadString(BaseURL, PostData);
+
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    string PostDataJSON = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingNestedObjJSON");
+                    ModelBindingNestedObjJSON.Text = client.UploadString(BaseURL, PostDataJSON);
                 }
                 catch (Exception error)
                 {
@@ -725,29 +832,48 @@ namespace WinForm
             }
         }
 
-        private async void ModelBindingArrayNestedObj(List<string> Name, List<string> Age,ForFunc DoFunc)
+        private void ModelBindingArrayNestedObj(List<string> Name, List<string> Age,ForFunc DoFunc, WebClientHandle WebClientFunc)
         {
-                try
+            //    try
+            //    {
+            //        List<Person> DataListA = new List<Person>();
+            //        List<Person> DataListF = new List<Person>();
+            //        Person Data = new Person();
+            //        for (int i = 0; i < Name.Count; i++)
+            //        {
+            //            Person Friends = new Person();
+            //            Friends.Name = Name[i];
+            //            Friends.Age = Int32.Parse(Age[i]);
+            //            DataListF.Add(Friends);
+            //            Data.Friends = DataListF;
+            //        }
+            //        DataListA.Add(Data);
+            //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
+            //        ModelBindingArrayNestedObjJSON.Text = DoFunc.SendinJSON(DataListA, BaseURL).GetAwaiter().GetResult();
+            //}
+            //    catch (Exception error)
+            //    {
+            //        Console.WriteLine("{0}", error.Message);
+            //    }
+
+            try
+            {
+                using (WebClient client = new WebClient())
                 {
-                    List<Person> DataListA = new List<Person>();
-                    List<Person> DataListF = new List<Person>();
-                    Person Data = new Person();
-                    for (int i = 0; i < Name.Count; i++)
-                    {
-                        Person Friends = new Person();
-                        Friends.Name = Name[i];
-                        Friends.Age = Int32.Parse(Age[i]);
-                        DataListF.Add(Friends);
-                        Data.Friends = DataListF;
-                    }
-                    DataListA.Add(Data);
                     Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
-                    ModelBindingArrayNestedObjJSON.Text = await DoFunc.SendinJSON(DataListA, BaseURL);;
-            }
-                catch (Exception error)
-                {
-                    Console.WriteLine("{0}", error.Message);
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
+                    string PostData = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingArrayNestedObj");
+                    ModelBindingArrayNestedObjURL.Text = client.UploadString(BaseURL, PostData);
+
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    string PostDataJSON = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingArrayNestedObjJSON");
+                    ModelBindingArrayNestedObjJSON.Text = client.UploadString(BaseURL, PostDataJSON);
                 }
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
+            }
         }
 
 

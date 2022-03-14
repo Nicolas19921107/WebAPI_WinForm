@@ -114,5 +114,114 @@ namespace WebAPI.Models
         }
     }
 
+
+    public class WebClientHandle
+    {
+        public string QueryString(string Name,string Age)
+        {
+            NameValueCollection QS = HttpUtility.ParseQueryString(string.Empty);
+            QS.Add("Name", Name);
+            QS.Add("Age", Age);
+            
+            return QS.ToString();
+        }
+        public string QueryStringComplex(List<string> Name, List<string> Age,string RequestAction)
+        {
+            string QS = "";
+            switch (RequestAction)
+            {
+                case "SimpleModelBindingArray":
+                    
+                    for (int i = 0; i < Name.Count; i++)
+                    {
+                        QS += $"Name[]={Name[i]}&Age[]={Age[i]}&";
+                    }
+                    return QS.Substring(0, QS.Length - 1);
+                case "ModelBindingArray":
+                    for (int i = 0; i < Name.Count; i++)
+                    {
+                        QS += $"[{i}][Name]={Name[i]}&[{i}][Age]={Age[i]}&";
+                    }
+                    return QS.Substring(0, QS.Length - 1);
+                case "ModelBindingArrayJSON":
+                    List<Human> DataList = new List<Human>();
+                    for (int i = 0; i < Name.Count; i++)
+                    {
+                        Human Data = new Human();
+                        Data.Name = Name[i];
+                        Data.Age = Int32.Parse(Age[i]);
+                        DataList.Add(Data);
+                    };
+                    return JsonConvert.SerializeObject(DataList);
+                case "ModelBindingNestedObj":
+                    QS += $"Name={Name[0]}&Age={Age[0]}&";
+                    if (Name.Count < 1)
+                    {
+                        return QS.Substring(0, QS.Length - 1);
+                    }
+                    else
+                    {
+                        for (int i = 1; i < Name.Count; i++)
+                        {
+                            QS += $"Friends[{i-1}][Name]={Name[i]}&Friends[{i-1}][Age]={Age[i]}&";
+                        }
+                        return QS.Substring(0, QS.Length - 1);
+                    }
+                case "ModelBindingNestedObjJSON":
+                    Person DataListPerson = new Person();
+                    List<Person> Friends = new List<Person>();
+                    DataListPerson.Name = Name[0];
+                    DataListPerson.Age = Int32.Parse(Age[0]);
+                    for (int i = 1; i < Name.Count; i++)
+                    {
+                        Person FriendAdd = new Person();
+                        FriendAdd.Name = Name[i];
+                        FriendAdd.Age = Int32.Parse(Age[i]);
+                        Friends.Add(FriendAdd);
+                        DataListPerson.Friends = Friends;
+                    }
+                    return JsonConvert.SerializeObject(DataListPerson);
+                case "ModelBindingArrayNestedObj":
+                    QS += $"[0][Name]={Name[0]}&[0][Age]={Age[0]}&";
+                    if (Name.Count < 1)
+                    {
+                        return QS.Substring(0, QS.Length - 1);
+                    }
+                    else
+                    {
+                        for (int i = 1; i < Name.Count; i++)
+                        {
+                            QS += $"[1][Friends][{i - 1}][Name]={Name[i]}&[1][Friends][{i - 1}][Age]={Age[i]}&";
+                        }
+                        return QS.Substring(0, QS.Length - 1);
+                    }
+                case "ModelBindingArrayNestedObjJSON":
+                    List<Person> DataListTop = new List<Person>();
+                    List<Person> DataListSecond = new List<Person>();
+                    Person DataOne = new Person();
+                    DataOne.Name = Name[0];
+                    DataOne.Age = Int32.Parse(Age[0]);
+                    DataListTop.Add(DataOne);
+                    for (int i = 1; i < Name.Count; i++)
+                    {
+                        Person DataFriends = new Person();
+                        DataFriends.Name = Name[i];
+                        DataFriends.Age = Int32.Parse(Age[i]);
+                        DataListSecond.Add(DataFriends);
+                    }
+                    if (Name.Count > 1)
+                    {
+                        DataListTop.Add(DataOne = new Person());
+                        DataListTop[1].Friends = DataListSecond;
+                    }
+                        return JsonConvert.SerializeObject(DataListTop);
+                default:
+                    return "";
+            }
+  
+        }
+
+    }
+
   
 }

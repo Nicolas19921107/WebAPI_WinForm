@@ -51,7 +51,7 @@ namespace WebAPI.Controllers
         /// <response code="200">回傳成功</response>
         [HttpPost]
         //[Route("api/Home/SimpleModelBindArray")]
-        public IHttpActionResult SimpleModelBindArray([FromBody] string[] Name, [FromUri] int[] Age)
+        public IHttpActionResult SimpleModelBindArray([FromUri] string[] Name, [FromUri] int[] Age)
         {
             string str = nameof(Name) + ":";
             foreach (string n in Name)
