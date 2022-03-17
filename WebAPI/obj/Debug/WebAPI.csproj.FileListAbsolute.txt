@@ -95,7 +95,6 @@ D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\XMLDocument.xml
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\Swashbuckle.Core.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\WebActivatorEx.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\Microsoft.Bcl.AsyncInterfaces.dll
-D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\RestSharp.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.Buffers.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.Memory.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.Numerics.Vectors.dll
@@ -114,4 +113,5 @@ D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.Text.Encodings.Web.xml
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.Text.Json.xml
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.Threading.Tasks.Extensions.xml
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.ValueTuple.xml
-D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.AssemblyReference.cache
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\WebApiContrib.dll
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\RestSharp.dll

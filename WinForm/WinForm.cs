@@ -80,6 +80,39 @@ namespace WinForm
             this.ModelBindingArrayHttpClientURL = new System.Windows.Forms.TextBox();
             this.ModelBindingArrayHttpClientJSON = new System.Windows.Forms.TextBox();
             this.ModelBindingArrayWebClientURL = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ModelBindingNestedObjWebApiContribURL = new System.Windows.Forms.TextBox();
+            this.ModelBindingNestedObjRestCSharpURL = new System.Windows.Forms.TextBox();
+            this.ModelBindingNestedObjHttpClientURL = new System.Windows.Forms.TextBox();
+            this.ModelBindingNestedObjWebClientURL = new System.Windows.Forms.TextBox();
+            this.ModelBindingNestedObjWebApiContribJSON = new System.Windows.Forms.TextBox();
+            this.ModelBindingNestedObjRestCSharpJSON = new System.Windows.Forms.TextBox();
+            this.ModelBindingNestedObjHttpClientJSON = new System.Windows.Forms.TextBox();
+            this.ModelBindingNestedObjWebClientJSON = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.ModelBindingArrayNestedObjWebApiContribJSON = new System.Windows.Forms.TextBox();
+            this.ModelBindingArrayNestedObjRestCSharpJSON = new System.Windows.Forms.TextBox();
+            this.ModelBindingArrayNestedObjHttpClientJSON = new System.Windows.Forms.TextBox();
+            this.ModelBindingArrayNestedObjWebClientJSON = new System.Windows.Forms.TextBox();
+            this.ModelBindingArrayNestedObjWebApiContribURL = new System.Windows.Forms.TextBox();
+            this.ModelBindingArrayNestedObjRestCSharpURL = new System.Windows.Forms.TextBox();
+            this.ModelBindingArrayNestedObjHttpClientURL = new System.Windows.Forms.TextBox();
+            this.ModelBindingArrayNestedObjWebClientURL = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.SimpleModelBindArrayWebApiContribJSON = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayRestCSharpJSON = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayWebClientJSON = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayWebApiContribURL = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayRestCSharpURL = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayHttpClientURL = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayHttpClientJSON = new System.Windows.Forms.TextBox();
+            this.SimpleModelBindArrayWebClientURL = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -192,7 +225,7 @@ namespace WinForm
             // 
             this.ModelBindObjTitle.BackColor = System.Drawing.Color.Orange;
             this.ModelBindObjTitle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindObjTitle.Location = new System.Drawing.Point(14, 376);
+            this.ModelBindObjTitle.Location = new System.Drawing.Point(12, 365);
             this.ModelBindObjTitle.Name = "ModelBindObjTitle";
             this.ModelBindObjTitle.Size = new System.Drawing.Size(185, 50);
             this.ModelBindObjTitle.TabIndex = 24;
@@ -213,35 +246,35 @@ namespace WinForm
             // ModelBindingNestedObjTitle
             // 
             this.ModelBindingNestedObjTitle.BackColor = System.Drawing.Color.Orange;
-            this.ModelBindingNestedObjTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingNestedObjTitle.Location = new System.Drawing.Point(1538, 392);
+            this.ModelBindingNestedObjTitle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjTitle.Location = new System.Drawing.Point(827, 365);
             this.ModelBindingNestedObjTitle.Name = "ModelBindingNestedObjTitle";
-            this.ModelBindingNestedObjTitle.Size = new System.Drawing.Size(185, 212);
+            this.ModelBindingNestedObjTitle.Size = new System.Drawing.Size(185, 49);
             this.ModelBindingNestedObjTitle.TabIndex = 28;
-            this.ModelBindingNestedObjTitle.Text = "ModelBindingNestedObj";
+            this.ModelBindingNestedObjTitle.Text = "ModelBindingNestedObj( HttpClient )";
             this.ModelBindingNestedObjTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SimpleModelBindArrayTitle
             // 
             this.SimpleModelBindArrayTitle.BackColor = System.Drawing.Color.Orange;
-            this.SimpleModelBindArrayTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SimpleModelBindArrayTitle.Location = new System.Drawing.Point(14, 606);
+            this.SimpleModelBindArrayTitle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayTitle.Location = new System.Drawing.Point(10, 589);
             this.SimpleModelBindArrayTitle.Name = "SimpleModelBindArrayTitle";
             this.SimpleModelBindArrayTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SimpleModelBindArrayTitle.Size = new System.Drawing.Size(185, 200);
+            this.SimpleModelBindArrayTitle.Size = new System.Drawing.Size(185, 50);
             this.SimpleModelBindArrayTitle.TabIndex = 30;
-            this.SimpleModelBindArrayTitle.Text = "SimpleModelBindArray";
+            this.SimpleModelBindArrayTitle.Text = "SimpleModelBindArray( HttpClient )";
             this.SimpleModelBindArrayTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ModelBindingArrayNestedObjTitle
             // 
             this.ModelBindingArrayNestedObjTitle.BackColor = System.Drawing.Color.Orange;
-            this.ModelBindingArrayNestedObjTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingArrayNestedObjTitle.Location = new System.Drawing.Point(1538, 615);
+            this.ModelBindingArrayNestedObjTitle.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjTitle.Location = new System.Drawing.Point(826, 592);
             this.ModelBindingArrayNestedObjTitle.Name = "ModelBindingArrayNestedObjTitle";
-            this.ModelBindingArrayNestedObjTitle.Size = new System.Drawing.Size(185, 202);
+            this.ModelBindingArrayNestedObjTitle.Size = new System.Drawing.Size(188, 49);
             this.ModelBindingArrayNestedObjTitle.TabIndex = 32;
-            this.ModelBindingArrayNestedObjTitle.Text = "ModelBindingArrayNestedObj";
+            this.ModelBindingArrayNestedObjTitle.Text = "ModelBindingArrayNestedObj( HttpClient )";
             this.ModelBindingArrayNestedObjTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -249,7 +282,7 @@ namespace WinForm
             this.label1.BackColor = System.Drawing.Color.SkyBlue;
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(516, 136);
+            this.label1.Location = new System.Drawing.Point(514, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 669);
             this.label1.TabIndex = 40;
@@ -261,7 +294,7 @@ namespace WinForm
             this.Urlencoded.BackColor = System.Drawing.Color.SkyBlue;
             this.Urlencoded.Enabled = false;
             this.Urlencoded.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Urlencoded.Location = new System.Drawing.Point(203, 136);
+            this.Urlencoded.Location = new System.Drawing.Point(201, 137);
             this.Urlencoded.Name = "Urlencoded";
             this.Urlencoded.Size = new System.Drawing.Size(119, 670);
             this.Urlencoded.TabIndex = 39;
@@ -404,7 +437,7 @@ namespace WinForm
             // 
             this.label11.BackColor = System.Drawing.Color.Orange;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(14, 431);
+            this.label11.Location = new System.Drawing.Point(12, 420);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(185, 50);
             this.label11.TabIndex = 66;
@@ -415,7 +448,7 @@ namespace WinForm
             // 
             this.label12.BackColor = System.Drawing.Color.Orange;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(14, 487);
+            this.label12.Location = new System.Drawing.Point(12, 476);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(185, 50);
             this.label12.TabIndex = 67;
@@ -426,7 +459,7 @@ namespace WinForm
             // 
             this.label13.BackColor = System.Drawing.Color.Orange;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 544);
+            this.label13.Location = new System.Drawing.Point(12, 529);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(185, 50);
             this.label13.TabIndex = 68;
@@ -436,7 +469,7 @@ namespace WinForm
             // ModelBindingObjWebApiContribJSON
             // 
             this.ModelBindingObjWebApiContribJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjWebApiContribJSON.Location = new System.Drawing.Point(641, 539);
+            this.ModelBindingObjWebApiContribJSON.Location = new System.Drawing.Point(639, 528);
             this.ModelBindingObjWebApiContribJSON.Multiline = true;
             this.ModelBindingObjWebApiContribJSON.Name = "ModelBindingObjWebApiContribJSON";
             this.ModelBindingObjWebApiContribJSON.ReadOnly = true;
@@ -447,7 +480,7 @@ namespace WinForm
             // ModelBindingObjRestCSharpJSON
             // 
             this.ModelBindingObjRestCSharpJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjRestCSharpJSON.Location = new System.Drawing.Point(641, 485);
+            this.ModelBindingObjRestCSharpJSON.Location = new System.Drawing.Point(639, 474);
             this.ModelBindingObjRestCSharpJSON.Multiline = true;
             this.ModelBindingObjRestCSharpJSON.Name = "ModelBindingObjRestCSharpJSON";
             this.ModelBindingObjRestCSharpJSON.ReadOnly = true;
@@ -458,7 +491,7 @@ namespace WinForm
             // ModelBindingObjWebClientJSON
             // 
             this.ModelBindingObjWebClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjWebClientJSON.Location = new System.Drawing.Point(641, 429);
+            this.ModelBindingObjWebClientJSON.Location = new System.Drawing.Point(639, 418);
             this.ModelBindingObjWebClientJSON.Multiline = true;
             this.ModelBindingObjWebClientJSON.Name = "ModelBindingObjWebClientJSON";
             this.ModelBindingObjWebClientJSON.ReadOnly = true;
@@ -469,7 +502,7 @@ namespace WinForm
             // ModelBindingObjWebApiContribURL
             // 
             this.ModelBindingObjWebApiContribURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjWebApiContribURL.Location = new System.Drawing.Point(328, 539);
+            this.ModelBindingObjWebApiContribURL.Location = new System.Drawing.Point(326, 528);
             this.ModelBindingObjWebApiContribURL.Multiline = true;
             this.ModelBindingObjWebApiContribURL.Name = "ModelBindingObjWebApiContribURL";
             this.ModelBindingObjWebApiContribURL.ReadOnly = true;
@@ -480,7 +513,7 @@ namespace WinForm
             // ModelBindingObjRestCSharpURL
             // 
             this.ModelBindingObjRestCSharpURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjRestCSharpURL.Location = new System.Drawing.Point(328, 485);
+            this.ModelBindingObjRestCSharpURL.Location = new System.Drawing.Point(326, 474);
             this.ModelBindingObjRestCSharpURL.Multiline = true;
             this.ModelBindingObjRestCSharpURL.Name = "ModelBindingObjRestCSharpURL";
             this.ModelBindingObjRestCSharpURL.ReadOnly = true;
@@ -491,7 +524,7 @@ namespace WinForm
             // ModelBindingObjHttpClientURL
             // 
             this.ModelBindingObjHttpClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjHttpClientURL.Location = new System.Drawing.Point(328, 376);
+            this.ModelBindingObjHttpClientURL.Location = new System.Drawing.Point(326, 365);
             this.ModelBindingObjHttpClientURL.Multiline = true;
             this.ModelBindingObjHttpClientURL.Name = "ModelBindingObjHttpClientURL";
             this.ModelBindingObjHttpClientURL.ReadOnly = true;
@@ -502,7 +535,7 @@ namespace WinForm
             // ModelBindingObjHttpClientJSON
             // 
             this.ModelBindingObjHttpClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjHttpClientJSON.Location = new System.Drawing.Point(641, 376);
+            this.ModelBindingObjHttpClientJSON.Location = new System.Drawing.Point(639, 365);
             this.ModelBindingObjHttpClientJSON.Multiline = true;
             this.ModelBindingObjHttpClientJSON.Name = "ModelBindingObjHttpClientJSON";
             this.ModelBindingObjHttpClientJSON.ReadOnly = true;
@@ -513,7 +546,7 @@ namespace WinForm
             // ModelBindingObjWebClientURL
             // 
             this.ModelBindingObjWebClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBindingObjWebClientURL.Location = new System.Drawing.Point(328, 431);
+            this.ModelBindingObjWebClientURL.Location = new System.Drawing.Point(326, 420);
             this.ModelBindingObjWebClientURL.Multiline = true;
             this.ModelBindingObjWebClientURL.Name = "ModelBindingObjWebClientURL";
             this.ModelBindingObjWebClientURL.ReadOnly = true;
@@ -526,7 +559,7 @@ namespace WinForm
             this.label3.BackColor = System.Drawing.Color.SkyBlue;
             this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(1333, 136);
+            this.label3.Location = new System.Drawing.Point(1331, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 669);
             this.label3.TabIndex = 78;
@@ -538,7 +571,7 @@ namespace WinForm
             this.label4.BackColor = System.Drawing.Color.SkyBlue;
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(1020, 138);
+            this.label4.Location = new System.Drawing.Point(1020, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 670);
             this.label4.TabIndex = 77;
@@ -666,9 +699,408 @@ namespace WinForm
             this.ModelBindingArrayWebClientURL.TabIndex = 82;
             this.ModelBindingArrayWebClientURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Orange;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(827, 418);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(185, 49);
+            this.label8.TabIndex = 90;
+            this.label8.Text = "ModelBindingNestedObj( WebClient )";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Orange;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(827, 474);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(185, 49);
+            this.label14.TabIndex = 91;
+            this.label14.Text = "ModelBindingNestedObj( RestCSharp )";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Orange;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(827, 529);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(185, 49);
+            this.label15.TabIndex = 92;
+            this.label15.Text = "ModelBindingNestedObj( WebApiContrib )";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ModelBindingNestedObjWebApiContribURL
+            // 
+            this.ModelBindingNestedObjWebApiContribURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjWebApiContribURL.Location = new System.Drawing.Point(1143, 527);
+            this.ModelBindingNestedObjWebApiContribURL.Multiline = true;
+            this.ModelBindingNestedObjWebApiContribURL.Name = "ModelBindingNestedObjWebApiContribURL";
+            this.ModelBindingNestedObjWebApiContribURL.ReadOnly = true;
+            this.ModelBindingNestedObjWebApiContribURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjWebApiContribURL.TabIndex = 96;
+            this.ModelBindingNestedObjWebApiContribURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingNestedObjRestCSharpURL
+            // 
+            this.ModelBindingNestedObjRestCSharpURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjRestCSharpURL.Location = new System.Drawing.Point(1143, 473);
+            this.ModelBindingNestedObjRestCSharpURL.Multiline = true;
+            this.ModelBindingNestedObjRestCSharpURL.Name = "ModelBindingNestedObjRestCSharpURL";
+            this.ModelBindingNestedObjRestCSharpURL.ReadOnly = true;
+            this.ModelBindingNestedObjRestCSharpURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjRestCSharpURL.TabIndex = 95;
+            this.ModelBindingNestedObjRestCSharpURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingNestedObjHttpClientURL
+            // 
+            this.ModelBindingNestedObjHttpClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjHttpClientURL.Location = new System.Drawing.Point(1143, 364);
+            this.ModelBindingNestedObjHttpClientURL.Multiline = true;
+            this.ModelBindingNestedObjHttpClientURL.Name = "ModelBindingNestedObjHttpClientURL";
+            this.ModelBindingNestedObjHttpClientURL.ReadOnly = true;
+            this.ModelBindingNestedObjHttpClientURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjHttpClientURL.TabIndex = 94;
+            this.ModelBindingNestedObjHttpClientURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingNestedObjWebClientURL
+            // 
+            this.ModelBindingNestedObjWebClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjWebClientURL.Location = new System.Drawing.Point(1143, 419);
+            this.ModelBindingNestedObjWebClientURL.Multiline = true;
+            this.ModelBindingNestedObjWebClientURL.Name = "ModelBindingNestedObjWebClientURL";
+            this.ModelBindingNestedObjWebClientURL.ReadOnly = true;
+            this.ModelBindingNestedObjWebClientURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjWebClientURL.TabIndex = 93;
+            this.ModelBindingNestedObjWebClientURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingNestedObjWebApiContribJSON
+            // 
+            this.ModelBindingNestedObjWebApiContribJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjWebApiContribJSON.Location = new System.Drawing.Point(1456, 527);
+            this.ModelBindingNestedObjWebApiContribJSON.Multiline = true;
+            this.ModelBindingNestedObjWebApiContribJSON.Name = "ModelBindingNestedObjWebApiContribJSON";
+            this.ModelBindingNestedObjWebApiContribJSON.ReadOnly = true;
+            this.ModelBindingNestedObjWebApiContribJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjWebApiContribJSON.TabIndex = 100;
+            this.ModelBindingNestedObjWebApiContribJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingNestedObjRestCSharpJSON
+            // 
+            this.ModelBindingNestedObjRestCSharpJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjRestCSharpJSON.Location = new System.Drawing.Point(1456, 473);
+            this.ModelBindingNestedObjRestCSharpJSON.Multiline = true;
+            this.ModelBindingNestedObjRestCSharpJSON.Name = "ModelBindingNestedObjRestCSharpJSON";
+            this.ModelBindingNestedObjRestCSharpJSON.ReadOnly = true;
+            this.ModelBindingNestedObjRestCSharpJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjRestCSharpJSON.TabIndex = 99;
+            this.ModelBindingNestedObjRestCSharpJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingNestedObjHttpClientJSON
+            // 
+            this.ModelBindingNestedObjHttpClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjHttpClientJSON.Location = new System.Drawing.Point(1456, 364);
+            this.ModelBindingNestedObjHttpClientJSON.Multiline = true;
+            this.ModelBindingNestedObjHttpClientJSON.Name = "ModelBindingNestedObjHttpClientJSON";
+            this.ModelBindingNestedObjHttpClientJSON.ReadOnly = true;
+            this.ModelBindingNestedObjHttpClientJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjHttpClientJSON.TabIndex = 98;
+            this.ModelBindingNestedObjHttpClientJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingNestedObjWebClientJSON
+            // 
+            this.ModelBindingNestedObjWebClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingNestedObjWebClientJSON.Location = new System.Drawing.Point(1456, 419);
+            this.ModelBindingNestedObjWebClientJSON.Multiline = true;
+            this.ModelBindingNestedObjWebClientJSON.Name = "ModelBindingNestedObjWebClientJSON";
+            this.ModelBindingNestedObjWebClientJSON.ReadOnly = true;
+            this.ModelBindingNestedObjWebClientJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingNestedObjWebClientJSON.TabIndex = 97;
+            this.ModelBindingNestedObjWebClientJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.Orange;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(826, 646);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(188, 49);
+            this.label16.TabIndex = 101;
+            this.label16.Text = "ModelBindingArrayNestedObj( WebClient )";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.Orange;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(826, 700);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(188, 49);
+            this.label17.TabIndex = 102;
+            this.label17.Text = "ModelBindingArrayNestedObj( RestCSharp )";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.Orange;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(826, 756);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(188, 49);
+            this.label18.TabIndex = 103;
+            this.label18.Text = "ModelBindingArrayNestedObj( WebApiContrib )";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ModelBindingArrayNestedObjWebApiContribJSON
+            // 
+            this.ModelBindingArrayNestedObjWebApiContribJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjWebApiContribJSON.Location = new System.Drawing.Point(1457, 755);
+            this.ModelBindingArrayNestedObjWebApiContribJSON.Multiline = true;
+            this.ModelBindingArrayNestedObjWebApiContribJSON.Name = "ModelBindingArrayNestedObjWebApiContribJSON";
+            this.ModelBindingArrayNestedObjWebApiContribJSON.ReadOnly = true;
+            this.ModelBindingArrayNestedObjWebApiContribJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjWebApiContribJSON.TabIndex = 111;
+            this.ModelBindingArrayNestedObjWebApiContribJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingArrayNestedObjRestCSharpJSON
+            // 
+            this.ModelBindingArrayNestedObjRestCSharpJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjRestCSharpJSON.Location = new System.Drawing.Point(1457, 701);
+            this.ModelBindingArrayNestedObjRestCSharpJSON.Multiline = true;
+            this.ModelBindingArrayNestedObjRestCSharpJSON.Name = "ModelBindingArrayNestedObjRestCSharpJSON";
+            this.ModelBindingArrayNestedObjRestCSharpJSON.ReadOnly = true;
+            this.ModelBindingArrayNestedObjRestCSharpJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjRestCSharpJSON.TabIndex = 110;
+            this.ModelBindingArrayNestedObjRestCSharpJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingArrayNestedObjHttpClientJSON
+            // 
+            this.ModelBindingArrayNestedObjHttpClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjHttpClientJSON.Location = new System.Drawing.Point(1457, 592);
+            this.ModelBindingArrayNestedObjHttpClientJSON.Multiline = true;
+            this.ModelBindingArrayNestedObjHttpClientJSON.Name = "ModelBindingArrayNestedObjHttpClientJSON";
+            this.ModelBindingArrayNestedObjHttpClientJSON.ReadOnly = true;
+            this.ModelBindingArrayNestedObjHttpClientJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjHttpClientJSON.TabIndex = 109;
+            this.ModelBindingArrayNestedObjHttpClientJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingArrayNestedObjWebClientJSON
+            // 
+            this.ModelBindingArrayNestedObjWebClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjWebClientJSON.Location = new System.Drawing.Point(1457, 647);
+            this.ModelBindingArrayNestedObjWebClientJSON.Multiline = true;
+            this.ModelBindingArrayNestedObjWebClientJSON.Name = "ModelBindingArrayNestedObjWebClientJSON";
+            this.ModelBindingArrayNestedObjWebClientJSON.ReadOnly = true;
+            this.ModelBindingArrayNestedObjWebClientJSON.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjWebClientJSON.TabIndex = 108;
+            this.ModelBindingArrayNestedObjWebClientJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingArrayNestedObjWebApiContribURL
+            // 
+            this.ModelBindingArrayNestedObjWebApiContribURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjWebApiContribURL.Location = new System.Drawing.Point(1144, 755);
+            this.ModelBindingArrayNestedObjWebApiContribURL.Multiline = true;
+            this.ModelBindingArrayNestedObjWebApiContribURL.Name = "ModelBindingArrayNestedObjWebApiContribURL";
+            this.ModelBindingArrayNestedObjWebApiContribURL.ReadOnly = true;
+            this.ModelBindingArrayNestedObjWebApiContribURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjWebApiContribURL.TabIndex = 107;
+            this.ModelBindingArrayNestedObjWebApiContribURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingArrayNestedObjRestCSharpURL
+            // 
+            this.ModelBindingArrayNestedObjRestCSharpURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjRestCSharpURL.Location = new System.Drawing.Point(1144, 701);
+            this.ModelBindingArrayNestedObjRestCSharpURL.Multiline = true;
+            this.ModelBindingArrayNestedObjRestCSharpURL.Name = "ModelBindingArrayNestedObjRestCSharpURL";
+            this.ModelBindingArrayNestedObjRestCSharpURL.ReadOnly = true;
+            this.ModelBindingArrayNestedObjRestCSharpURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjRestCSharpURL.TabIndex = 106;
+            this.ModelBindingArrayNestedObjRestCSharpURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingArrayNestedObjHttpClientURL
+            // 
+            this.ModelBindingArrayNestedObjHttpClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjHttpClientURL.Location = new System.Drawing.Point(1144, 592);
+            this.ModelBindingArrayNestedObjHttpClientURL.Multiline = true;
+            this.ModelBindingArrayNestedObjHttpClientURL.Name = "ModelBindingArrayNestedObjHttpClientURL";
+            this.ModelBindingArrayNestedObjHttpClientURL.ReadOnly = true;
+            this.ModelBindingArrayNestedObjHttpClientURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjHttpClientURL.TabIndex = 105;
+            this.ModelBindingArrayNestedObjHttpClientURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ModelBindingArrayNestedObjWebClientURL
+            // 
+            this.ModelBindingArrayNestedObjWebClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelBindingArrayNestedObjWebClientURL.Location = new System.Drawing.Point(1144, 647);
+            this.ModelBindingArrayNestedObjWebClientURL.Multiline = true;
+            this.ModelBindingArrayNestedObjWebClientURL.Name = "ModelBindingArrayNestedObjWebClientURL";
+            this.ModelBindingArrayNestedObjWebClientURL.ReadOnly = true;
+            this.ModelBindingArrayNestedObjWebClientURL.Size = new System.Drawing.Size(182, 50);
+            this.ModelBindingArrayNestedObjWebClientURL.TabIndex = 104;
+            this.ModelBindingArrayNestedObjWebClientURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.Orange;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(10, 647);
+            this.label19.Name = "label19";
+            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label19.Size = new System.Drawing.Size(185, 50);
+            this.label19.TabIndex = 112;
+            this.label19.Text = "SimpleModelBindArray( WebClient )";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Orange;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(10, 701);
+            this.label20.Name = "label20";
+            this.label20.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label20.Size = new System.Drawing.Size(185, 50);
+            this.label20.TabIndex = 113;
+            this.label20.Text = "SimpleModelBindArray( RestCSharp )";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.Orange;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(10, 755);
+            this.label21.Name = "label21";
+            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label21.Size = new System.Drawing.Size(185, 50);
+            this.label21.TabIndex = 114;
+            this.label21.Text = "SimpleModelBindArray( WebApiContrib )";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SimpleModelBindArrayWebApiContribJSON
+            // 
+            this.SimpleModelBindArrayWebApiContribJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayWebApiContribJSON.Location = new System.Drawing.Point(639, 752);
+            this.SimpleModelBindArrayWebApiContribJSON.Multiline = true;
+            this.SimpleModelBindArrayWebApiContribJSON.Name = "SimpleModelBindArrayWebApiContribJSON";
+            this.SimpleModelBindArrayWebApiContribJSON.ReadOnly = true;
+            this.SimpleModelBindArrayWebApiContribJSON.Size = new System.Drawing.Size(182, 49);
+            this.SimpleModelBindArrayWebApiContribJSON.TabIndex = 122;
+            this.SimpleModelBindArrayWebApiContribJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SimpleModelBindArrayRestCSharpJSON
+            // 
+            this.SimpleModelBindArrayRestCSharpJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayRestCSharpJSON.Location = new System.Drawing.Point(639, 698);
+            this.SimpleModelBindArrayRestCSharpJSON.Multiline = true;
+            this.SimpleModelBindArrayRestCSharpJSON.Name = "SimpleModelBindArrayRestCSharpJSON";
+            this.SimpleModelBindArrayRestCSharpJSON.ReadOnly = true;
+            this.SimpleModelBindArrayRestCSharpJSON.Size = new System.Drawing.Size(182, 49);
+            this.SimpleModelBindArrayRestCSharpJSON.TabIndex = 121;
+            this.SimpleModelBindArrayRestCSharpJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SimpleModelBindArrayWebClientJSON
+            // 
+            this.SimpleModelBindArrayWebClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayWebClientJSON.Location = new System.Drawing.Point(639, 642);
+            this.SimpleModelBindArrayWebClientJSON.Multiline = true;
+            this.SimpleModelBindArrayWebClientJSON.Name = "SimpleModelBindArrayWebClientJSON";
+            this.SimpleModelBindArrayWebClientJSON.ReadOnly = true;
+            this.SimpleModelBindArrayWebClientJSON.Size = new System.Drawing.Size(182, 49);
+            this.SimpleModelBindArrayWebClientJSON.TabIndex = 120;
+            this.SimpleModelBindArrayWebClientJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SimpleModelBindArrayWebApiContribURL
+            // 
+            this.SimpleModelBindArrayWebApiContribURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayWebApiContribURL.Location = new System.Drawing.Point(326, 752);
+            this.SimpleModelBindArrayWebApiContribURL.Multiline = true;
+            this.SimpleModelBindArrayWebApiContribURL.Name = "SimpleModelBindArrayWebApiContribURL";
+            this.SimpleModelBindArrayWebApiContribURL.ReadOnly = true;
+            this.SimpleModelBindArrayWebApiContribURL.Size = new System.Drawing.Size(182, 50);
+            this.SimpleModelBindArrayWebApiContribURL.TabIndex = 119;
+            this.SimpleModelBindArrayWebApiContribURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SimpleModelBindArrayRestCSharpURL
+            // 
+            this.SimpleModelBindArrayRestCSharpURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayRestCSharpURL.Location = new System.Drawing.Point(326, 698);
+            this.SimpleModelBindArrayRestCSharpURL.Multiline = true;
+            this.SimpleModelBindArrayRestCSharpURL.Name = "SimpleModelBindArrayRestCSharpURL";
+            this.SimpleModelBindArrayRestCSharpURL.ReadOnly = true;
+            this.SimpleModelBindArrayRestCSharpURL.Size = new System.Drawing.Size(182, 50);
+            this.SimpleModelBindArrayRestCSharpURL.TabIndex = 118;
+            this.SimpleModelBindArrayRestCSharpURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SimpleModelBindArrayHttpClientURL
+            // 
+            this.SimpleModelBindArrayHttpClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayHttpClientURL.Location = new System.Drawing.Point(326, 589);
+            this.SimpleModelBindArrayHttpClientURL.Multiline = true;
+            this.SimpleModelBindArrayHttpClientURL.Name = "SimpleModelBindArrayHttpClientURL";
+            this.SimpleModelBindArrayHttpClientURL.ReadOnly = true;
+            this.SimpleModelBindArrayHttpClientURL.Size = new System.Drawing.Size(182, 50);
+            this.SimpleModelBindArrayHttpClientURL.TabIndex = 117;
+            this.SimpleModelBindArrayHttpClientURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SimpleModelBindArrayHttpClientJSON
+            // 
+            this.SimpleModelBindArrayHttpClientJSON.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayHttpClientJSON.Location = new System.Drawing.Point(639, 589);
+            this.SimpleModelBindArrayHttpClientJSON.Multiline = true;
+            this.SimpleModelBindArrayHttpClientJSON.Name = "SimpleModelBindArrayHttpClientJSON";
+            this.SimpleModelBindArrayHttpClientJSON.ReadOnly = true;
+            this.SimpleModelBindArrayHttpClientJSON.Size = new System.Drawing.Size(182, 49);
+            this.SimpleModelBindArrayHttpClientJSON.TabIndex = 116;
+            this.SimpleModelBindArrayHttpClientJSON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SimpleModelBindArrayWebClientURL
+            // 
+            this.SimpleModelBindArrayWebClientURL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleModelBindArrayWebClientURL.Location = new System.Drawing.Point(326, 644);
+            this.SimpleModelBindArrayWebClientURL.Multiline = true;
+            this.SimpleModelBindArrayWebClientURL.Name = "SimpleModelBindArrayWebClientURL";
+            this.SimpleModelBindArrayWebClientURL.ReadOnly = true;
+            this.SimpleModelBindArrayWebClientURL.Size = new System.Drawing.Size(182, 50);
+            this.SimpleModelBindArrayWebClientURL.TabIndex = 115;
+            this.SimpleModelBindArrayWebClientURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // WinForm
             // 
             this.ClientSize = new System.Drawing.Size(1813, 852);
+            this.Controls.Add(this.SimpleModelBindArrayWebApiContribJSON);
+            this.Controls.Add(this.SimpleModelBindArrayRestCSharpJSON);
+            this.Controls.Add(this.SimpleModelBindArrayWebClientJSON);
+            this.Controls.Add(this.SimpleModelBindArrayWebApiContribURL);
+            this.Controls.Add(this.SimpleModelBindArrayRestCSharpURL);
+            this.Controls.Add(this.SimpleModelBindArrayHttpClientURL);
+            this.Controls.Add(this.SimpleModelBindArrayHttpClientJSON);
+            this.Controls.Add(this.SimpleModelBindArrayWebClientURL);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.ModelBindingArrayNestedObjWebApiContribJSON);
+            this.Controls.Add(this.ModelBindingArrayNestedObjRestCSharpJSON);
+            this.Controls.Add(this.ModelBindingArrayNestedObjHttpClientJSON);
+            this.Controls.Add(this.ModelBindingArrayNestedObjWebClientJSON);
+            this.Controls.Add(this.ModelBindingArrayNestedObjWebApiContribURL);
+            this.Controls.Add(this.ModelBindingArrayNestedObjRestCSharpURL);
+            this.Controls.Add(this.ModelBindingArrayNestedObjHttpClientURL);
+            this.Controls.Add(this.ModelBindingArrayNestedObjWebClientURL);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.ModelBindingNestedObjWebApiContribJSON);
+            this.Controls.Add(this.ModelBindingNestedObjRestCSharpJSON);
+            this.Controls.Add(this.ModelBindingNestedObjHttpClientJSON);
+            this.Controls.Add(this.ModelBindingNestedObjWebClientJSON);
+            this.Controls.Add(this.ModelBindingNestedObjWebApiContribURL);
+            this.Controls.Add(this.ModelBindingNestedObjRestCSharpURL);
+            this.Controls.Add(this.ModelBindingNestedObjHttpClientURL);
+            this.Controls.Add(this.ModelBindingNestedObjWebClientURL);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.ModelBindingArrayWebApiContribJSON);
             this.Controls.Add(this.ModelBindingArrayRestCSharpJSON);
             this.Controls.Add(this.ModelBindingArrayWebClientJSON);
@@ -732,9 +1164,10 @@ namespace WinForm
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            HttpClientHandle DoFunc = new HttpClientHandle();
-            WebClientHandle WebClientFunc = new WebClientHandle();
+            HttpClientClient DoFunc = new HttpClientClient();
+            WebClientClient WebClientFunc = new WebClientClient();
             RestSharpClient RestSharpFunc = new RestSharpClient();
+            WebApiConClient WebApiFunc = new WebApiConClient();
             string[] NameInput = { NameOne.Text, NameTwo.Text, NameThr.Text, NameFour.Text };
             string[] AgeInput = { AgeOne.Text, AgeTwo.Text, AgeThr.Text, AgeFour.Text };
             List<string> Name = new List<string>();
@@ -754,48 +1187,58 @@ namespace WinForm
 
 
             //SimpleBinding
-            SimpleBinding(Name[0],Age[0], DoFunc, WebClientFunc,RestSharpFunc);
+            SimpleBinding(Name,Age, DoFunc, WebClientFunc,RestSharpFunc,WebApiFunc);
 
 
             //ModelBinObj
-            ModelBindObj(Name[0], Age[0], DoFunc, WebClientFunc, RestSharpFunc);
+            ModelBindObj(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
 
 
-            ////SimpleModelBindArray
+            //////SimpleModelBindArray
             //SimpleModelBindingArray(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
 
 
-            ////ModelBindingArray
-            ModelBindingArray(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
+            //////ModelBindingArray
+            //ModelBindingArray(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
 
-            ////ModelBindingNestedObj
+            //////ModelBindingNestedObj
             //ModelBindingNestedObj(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
 
 
-            ////ModelBindingArrayNestedObj
+            //////ModelBindingArrayNestedObj
             //ModelBindingArrayNestedObj(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
 
         }
 
-        private void SimpleBinding(string Name,string Age, HttpClientHandle HttpClientFunc,WebClientHandle WebClientFunc, RestSharpClient RestSharpFunc)
+        private void SimpleBinding(List<string> Name,List<string> Age, HttpClientClient HttpClientFunc,WebClientClient WebClientFunc, RestSharpClient RestSharpFunc, WebApiConClient WebApiFunc)
         {
             try
             {
                 
                 Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleBinding");
+                //Uri WebApiBaseURL = new Uri("https://localhost:44376/api/WebApiContribPackage/SimpleBinding");
 
-                // HttpClient
-                SimpleBindingHttpClientURL.Text = HttpClientFunc.CreateNewDic(Name, Age, BaseURL);
-                SimpleBindingHttpClientJSON.Text = HttpClientFunc.SendinJSON(Name, Age, BaseURL);
+                using (HttpClient client = new HttpClient())
+                {
+                    // HttpClient
+                    SimpleBindingHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL,"SimpleBinding", "application/x-www-form-urlencoded", client);
+                    SimpleBindingHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL,"SimpleBinding", "application/json",client);
+                }
 
-                // RestCSharp
-                SimpleBindingRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL);
-                SimpleBindingRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL);
+                using (WebClient client = new WebClient())
+                {
+                    // WebClient
+                    SimpleBindingWebClientURL.Text = WebClientFunc.QueryString(Name, Age, "SimpleBinding", "application/x-www-form-urlencoded", BaseURL,client);
+                    SimpleBindingWebClientJSON.Text = WebClientFunc.QueryString(Name, Age, "SimpleBinding", "application/json", BaseURL,client);
+                }
 
-                // WebClient
-                SimpleBindingWebClientURL.Text = WebClientFunc.PostData(Name, Age, "application/x-www-form-urlencoded", BaseURL);
-                SimpleBindingWebClientJSON.Text = WebClientFunc.PostData(Name, Age, "application/json", BaseURL);
+                //// RestCSharp
+                //SimpleBindingRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL);
+                //SimpleBindingRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL);
 
+                // WebApiContrib
+                //SimpleBindingWebApiContribURL.Text = WebApiFunc.QueryString(Name, Age, WebApiBaseURL, "application/x-www-form-urlencoded");
+                //SimpleBindingWebApiContribJSON.Text = WebApiFunc.QueryString(Name, Age, WebApiBaseURL, "application/json");
 
             }
             catch (Exception error)
@@ -804,236 +1247,149 @@ namespace WinForm
             }
         }
 
-        private void ModelBindObj(string Name,string Age, HttpClientHandle HttpClientFunc, WebClientHandle WebClientFunc, RestSharpClient RestSharpFunc)
+        private void ModelBindObj(List<string> Name, List<string> Age, HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
         {
             try
             {
                 Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindObj");
 
-                // HttpClient
-                ModelBindingObjHttpClientURL.Text = HttpClientFunc.CreateNewDic(Name, Age, BaseURL);
-                ModelBindingObjHttpClientJSON.Text = HttpClientFunc.SendinJSON(Name, Age, BaseURL);
-
-                // WebClient
-                ModelBindingObjWebClientURL.Text = WebClientFunc.PostData(Name, Age, "application/x-www-form-urlencoded", BaseURL);
-                ModelBindingObjWebClientJSON.Text = WebClientFunc.PostData(Name, Age, "application/json", BaseURL);
-
-                // RestCSharp
-                ModelBindingObjRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL);
-                ModelBindingObjRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL);
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("{0}", error.Message);
-            }
-
-        }
-
-        // 待解
-        private void SimpleModelBindingArray(List<string> Name, List<string> Age, HttpClientHandle HttpClientFunc,WebClientHandle WebClientFunc, RestSharpClient RestSharpFunc)
-        {
-
-            //try
-            //{
-            //    Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray?" + HttpClientFunc.QueryString(Age));
-            //    SimpleModelBindArrayURL.Text = HttpClientFunc.SendinUrlEncoded(HttpClientFunc.CreateNewDic(Name, Age, 2), BaseURL).GetAwaiter().GetResult();
-
-
-            //    SimpleModelBindArrayJSON.Text = HttpClientFunc.SendinJSON(Name, BaseURL).GetAwaiter().GetResult();
-            //}
-            //catch (Exception error)
-            //{
-            //    Console.WriteLine("{0}", error.Message);
-            //}
-
-            try
-            {
-                Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray");
-                //using (WebClient client = new WebClient())
-                //{
-                //    string PostData = WebClientFunc.QueryStringComplex(Name, Age, "SimpleModelBindingArray");
-                //    Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray?" + PostData);
-                //    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
-                //    SimpleModelBindArrayURL.Text = client.UploadString(BaseURL, PostData);
-
-                //    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-                //    dynamic Data = new ExpandoObject();
-                //    Data.Name = Name;
-                //    Data.Age = Age;
-                //    SimpleModelBindArrayJSON.Text = client.UploadString(BaseURL, JsonConvert.SerializeObject(Data));
-                //}
-
-
-                // RestCSharp
-                //SimpleModelBindArrayURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "SimpleModelBindingArray");
-                //SimpleModelBindArrayJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "SimpleModelBindingArray");
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("{0}", error.Message);
-            }
-        }
-
-        private void ModelBindingArray(List<string> Name, List<string> Age, HttpClientHandle HttpClientFunc, WebClientHandle WebClientFunc, RestSharpClient RestSharpFunc)
-        {
-            //try
-            //{
-            //    //Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
-            //    //List<Human> DataList = new List<Human>();
-            //    //for (int i = 0; i < Name.Count; i++)
-            //    //{
-            //    //    Human Data = new Human();
-            //    //    Data.Name = Name[i];
-            //    //    Data.Age = Int32.Parse(Age[i]);
-            //    //    DataList.Add(Data);
-            //    //};
-            //    //Human DataE = new Human();
-            //    //DataE.Name = Name[0];
-            //    //DataE.Age = Int32.Parse(Age[0]);
-            //    //var content = new Dictionary<string, string>
-            //    //{
-            //    //    {"", JsonConvert.SerializeObject(DataE)}
-            //    //};
-
-            //    //ModelBindingArrayURL.Text = HttpClientFunc.PostURL(new FormUrlEncodedContent(content), BaseURL).GetAwaiter().GetResult();
-
-            //    // RestCSharp
-            //    //ModelBindingArrayURL.Text = await HttpClientFunc.SendinUrlEncoded(TEST, BaseURL);
-            //    //ModelBindingArrayJSON.Text = await HttpClientFunc.SendinJSON(DataList, BaseURL);
-
-            //    //HttpClientFunc.QueryString(Name, Age);
-
-            //}
-            //catch (Exception error)
-            //{
-            //    Console.WriteLine("{0}", error.Message);
-            //}
-
-            try
-            {
-                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
-
-                // RestCSharp
-                ModelBindingArrayHttpClientURL.Text = HttpClientFunc.CreateNewDic(Name, Age, BaseURL,"ModelBindingArray");
-                ModelBindingArrayHttpClientJSON.Text = HttpClientFunc.CreateNewDic(Name, Age, BaseURL, "ModelBindingArrayJSON");
-
-                // WebClient
-                ModelBindingArrayWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "ModelBindingArray");
-                ModelBindingArrayWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "ModelBindingArrayJSON");
-
-                // RestCSharp
-                ModelBindingArrayRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingArray");
-                ModelBindingArrayRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingArray");
-
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("{0}", error.Message);
-            }
-        }
-
-        private void ModelBindingNestedObj(List<string> Name, List<string> Age,HttpClientHandle DoFunc, WebClientHandle WebClientFunc, RestSharpClient RestSharpFunc)
-        {
-            //using (HttpClient client = new HttpClient())
-            //{
-            //    try
-            //    {
-            //        Person DataList = new Person();
-            //        List<Person> Data = new List<Person>();
-            //        for (int i = 0; i < Name.Count; i++)
-            //        {
-            //            Person Friends = new Person();
-            //            Friends.Name = Name[i];
-            //            Friends.Age = Int32.Parse(Age[i]);
-            //            Data.Add(Friends);
-            //            DataList.Friends = Data;
-            //        }
-
-            //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
-            //        ModelBindingNestedObjJSON.Text = HttpClientFunc.SendinJSON(DataList, BaseURL).GetAwaiter().GetResult();
-            //    }
-            //    catch (Exception error)
-            //    {
-            //        Console.WriteLine("{0}", error.Message);
-            //    }
-            //}
-
-                try
+                using (HttpClient client = new HttpClient())
                 {
-                    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
-
-                    //using (WebClient client = new WebClient())
-                    //{
-                    //Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
-                    //client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
-                    //string PostData = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingNestedObj");
-                    //ModelBindingNestedObjURL.Text = client.UploadString(BaseURL, PostData);
-
-                    //client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-                    //string PostDataJSON = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingNestedObjJSON");
-                    //ModelBindingNestedObjJSON.Text = client.UploadString(BaseURL, PostDataJSON);
-
-                    //}
-
-                    // RestCSharp
-                    //ModelBindingNestedObjURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingNestedObj");
-                    //ModelBindingNestedObjJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingNestedObj");
+                    // HttpClient
+                    ModelBindingObjHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindObj", "application/x-www-form-urlencoded", client);
+                    ModelBindingObjHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindObj", "application/json", client);
                 }
-                catch (Exception error)
+
+                using (WebClient client = new WebClient())
                 {
-                    Console.WriteLine("{0}", error.Message);
+                    // WebClient
+                    ModelBindingObjWebClientURL.Text = WebClientFunc.QueryString(Name, Age, "ModelBindObj", "application/x-www-form-urlencoded", BaseURL, client);
+                    ModelBindingObjWebClientJSON.Text = WebClientFunc.QueryString(Name, Age, "ModelBindObj", "application/json", BaseURL, client);
                 }
-            
-        }
-
-        private void ModelBindingArrayNestedObj(List<string> Name, List<string> Age,HttpClientHandle DoFunc, WebClientHandle WebClientFunc, RestSharpClient RestSharpFunc)
-        {
-            //    try
-            //    {
-            //        List<Person> DataListA = new List<Person>();
-            //        List<Person> DataListF = new List<Person>();
-            //        Person Data = new Person();
-            //        for (int i = 0; i < Name.Count; i++)
-            //        {
-            //            Person Friends = new Person();
-            //            Friends.Name = Name[i];
-            //            Friends.Age = Int32.Parse(Age[i]);
-            //            DataListF.Add(Friends);
-            //            Data.Friends = DataListF;
-            //        }
-            //        DataListA.Add(Data);
-            //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
-            //        ModelBindingArrayNestedObjJSON.Text = HttpClientFunc.SendinJSON(DataListA, BaseURL).GetAwaiter().GetResult();
-            //}
-            //    catch (Exception error)
-            //    {
-            //        Console.WriteLine("{0}", error.Message);
-            //    }
-
-            try
-            {
-                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
-                //using (WebClient client = new WebClient())
-                //{
-                //    Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
-                //    client.Headers.Add(HttpRequestHeader.ContentType, "application/x-www-form-urlencoded");
-                //    string PostData = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingArrayNestedObj");
-                //    ModelBindingArrayNestedObjURL.Text = client.UploadString(BaseURL, PostData);
-
-                //    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-                //    string PostDataJSON = WebClientFunc.QueryStringComplex(Name, Age, "ModelBindingArrayNestedObjJSON");
-                //    ModelBindingArrayNestedObjJSON.Text = client.UploadString(BaseURL, PostDataJSON);
-                //}
-
-                // RestCSharp
-                //ModelBindingArrayNestedObjURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingArrayNestedObj");
-                //ModelBindingArrayNestedObjJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingArrayNestedObj");
+                //// RestCSharp
+                //ModelBindingObjRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL);
+                //ModelBindingObjRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL);
             }
             catch (Exception error)
             {
                 Console.WriteLine("{0}", error.Message);
             }
+
         }
+
+        //private void SimpleModelBindingArray(List<string> Name, List<string> Age, HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
+        //{
+        //    try
+        //    {
+        //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray");
+
+        //        using (HttpClient client = new HttpClient())
+        //        {
+        //            /// HttpClient
+        //            SimpleModelBindArrayHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/x-www-form-urlencoded", client);
+        //            SimpleModelBindArrayHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/json", client);
+        //        }
+
+        //        //// WebClient
+        //        SimpleModelBindArrayWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "SimpleModelBindingArray");
+        //        SimpleModelBindArrayWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "SimpleModelBindingArrayJSON");
+
+
+        //        // RestCSharp
+        //        SimpleModelBindArrayRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "SimpleModelBindingArray");
+        //        SimpleModelBindArrayRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "SimpleModelBindingArrayJSON");
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.WriteLine("{0}", error.Message);
+        //    }
+        //}
+
+        //private void ModelBindingArray(List<string> Name, List<string> Age, HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
+        //{
+        //    try
+        //    {
+        //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
+
+        //        using (HttpClient client = new HttpClient())
+        //        {
+        //            // HttpClient
+        //            ModelBindingArrayHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArray", "application/x-www-form-urlencoded", client);
+        //            ModelBindingArrayHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArray", "application/json", client);
+        //        }
+
+        //        // WebClient
+        //        ModelBindingArrayWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "ModelBindingArray");
+        //        ModelBindingArrayWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "ModelBindingArrayJSON");
+
+        //        // RestCSharp
+        //        ModelBindingArrayRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingArray");
+        //        ModelBindingArrayRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingArray");
+
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.WriteLine("{0}", error.Message);
+        //    }
+        //}
+
+        //private void ModelBindingNestedObj(List<string> Name, List<string> Age,HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
+        //{
+
+        //    try
+        //        {
+        //            Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
+
+        //        using (HttpClient client = new HttpClient())
+        //        {
+        //            // HttpClient
+        //            ModelBindingNestedObjHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/x-www-form-urlencoded", client);
+        //            ModelBindingNestedObjHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/json", client);
+        //        }
+
+        //            // WebClient
+        //            ModelBindingNestedObjWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "ModelBindingNestedObj");
+        //            ModelBindingNestedObjWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "ModelBindingNestedObjJSON");
+
+
+        //            // RestCSharp
+        //            ModelBindingNestedObjRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingNestedObj");
+        //            ModelBindingNestedObjRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingNestedObj");
+        //    }
+        //        catch (Exception error)
+        //        {
+        //            Console.WriteLine("{0}", error.Message);
+        //        }
+
+        //}
+
+        //private void ModelBindingArrayNestedObj(List<string> Name, List<string> Age,HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
+        //{
+        //    try
+        //    {
+        //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
+
+        //        using (HttpClient client = new HttpClient())
+        //        {
+        //            // HttpClient
+        //            ModelBindingArrayNestedObjHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/x-www-form-urlencoded", client);
+        //            ModelBindingArrayNestedObjHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/json", client);
+        //        }
+
+        //        // WebClient
+        //        ModelBindingArrayNestedObjWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "ModelBindingArrayNestedObj");
+        //        ModelBindingArrayNestedObjWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "ModelBindingArrayNestedObjJSON");
+
+
+        //        // RestCSharp
+        //        ModelBindingArrayNestedObjRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingArrayNestedObj");
+        //        ModelBindingArrayNestedObjRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingArrayNestedObj");
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.WriteLine("{0}", error.Message);
+        //    }
+        //}
 
 
 

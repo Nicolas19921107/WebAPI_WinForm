@@ -10,8 +10,8 @@ using WebApiContrib.ModelBinders;
 
 namespace WebAPI.Controllers
 {
-    //[MvcStyleBinding]
-    public class HomeController : ApiController
+    [MvcStyleBinding]
+    public class WebApiContribPackageController : ApiController
     {
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         [HttpPost]
         [ResponseType(typeof(Human))]
         //[Route("api/Home/SimpleBinding")]
-        public IHttpActionResult SimpleBinding([FromBody]string Name,[FromUri] int Age)
+        public IHttpActionResult SimpleBinding(string Name,int Age)
         {
           return Ok(nameof(Name) + ":" + Name + ", " + nameof(Age) + ":" + Age);
         }
@@ -53,7 +53,7 @@ namespace WebAPI.Controllers
         /// <response code="200">回傳成功</response>
         [HttpPost]
         //[Route("api/Home/SimpleModelBindArray")]
-        public IHttpActionResult SimpleModelBindArray([FromBody] string[] Name,[FromUri] int[] Age)
+        public IHttpActionResult SimpleModelBindArray(string[] Name, int[] Age)
         {
             string str = nameof(Name) + ":";
             foreach (string n in Name)

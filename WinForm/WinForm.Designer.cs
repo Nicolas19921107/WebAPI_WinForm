@@ -83,5 +83,38 @@ namespace WinForm
         private System.Windows.Forms.TextBox ModelBindingArrayHttpClientURL;
         private System.Windows.Forms.TextBox ModelBindingArrayHttpClientJSON;
         private System.Windows.Forms.TextBox ModelBindingArrayWebClientURL;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjWebApiContribURL;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjRestCSharpURL;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjHttpClientURL;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjWebClientURL;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjWebApiContribJSON;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjRestCSharpJSON;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjHttpClientJSON;
+        private System.Windows.Forms.TextBox ModelBindingNestedObjWebClientJSON;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjWebApiContribJSON;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjRestCSharpJSON;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjHttpClientJSON;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjWebClientJSON;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjWebApiContribURL;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjRestCSharpURL;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjHttpClientURL;
+        private System.Windows.Forms.TextBox ModelBindingArrayNestedObjWebClientURL;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayWebApiContribJSON;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayRestCSharpJSON;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayWebClientJSON;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayWebApiContribURL;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayRestCSharpURL;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayHttpClientURL;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayHttpClientJSON;
+        private System.Windows.Forms.TextBox SimpleModelBindArrayWebClientURL;
     }
 }

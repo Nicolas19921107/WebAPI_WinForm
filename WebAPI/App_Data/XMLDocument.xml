@@ -481,7 +481,61 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:WebAPI.Controllers.HomeController.SimpleBinding(WebAPI.Models.Human)">
+        <member name="M:WebAPI.Controllers.WebApiContribPackageController.SimpleBinding(System.String,System.Int32)">
+            <summary>
+            SimpleBinding
+            </summary>
+            <remarks>測試 SimpleBinding </remarks>
+            <param name="data">Human 類別，裡面有 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.WebApiContribPackageController.ModelBindObj(WebAPI.Models.Human)">
+            <summary>
+            ModelBindingObj
+            </summary>
+            <remarks>測試 Obj 的 ModelBinding </remarks>
+            <param name="data">Human 內的 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.WebApiContribPackageController.SimpleModelBindArray(System.String[],System.Int32[])">
+            <summary>
+            SimpleModelBindArray
+            </summary>
+            <remarks>測試 Array 的 SimpleBinding </remarks>
+            <param name="data"> Name 與 Age 組成的陣列</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.WebApiContribPackageController.ModelBindingArray(WebAPI.Models.Human[])">
+            <summary>
+            ModelBindingArray
+            </summary>
+            <remarks>測試 Array 的 ModelBinding </remarks>
+            <param name="data">Human 類別，裡面有 Name 與 Age 屬性組成的陣列</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.WebApiContribPackageController.ModelBindingNestedObj(WebAPI.Models.Person)">
+            <summary>
+            ModelBindingNestedObj
+            </summary>
+            <remarks>測試 Obj 的 ModelBindingNestedArray </remarks>
+            <param name="data">Person 內有個 Friend 集合，裡面有 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.WebApiContribPackageController.ModelBindingArrayNestedObj(WebAPI.Models.Person[])">
+            <summary>
+            ModelBindingArrayNestedObj
+            </summary>
+            <remarks>測試 Obj 的 ModelBindingNestedArray </remarks>
+            <param name="data">Person 陣列，內有 Friend 集合，裡面有 Name 與 Age 屬性</param>
+            <returns>123</returns>
+            <response code="200">回傳成功</response>
+        </member>
+        <member name="M:WebAPI.Controllers.HomeController.SimpleBinding(System.String,System.Int32)">
             <summary>
             SimpleBinding
             </summary>
