@@ -1164,10 +1164,11 @@ namespace WinForm
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            HttpClientClient DoFunc = new HttpClientClient();
-            WebClientClient WebClientFunc = new WebClientClient();
-            RestSharpClient RestSharpFunc = new RestSharpClient();
-            WebApiConClient WebApiFunc = new WebApiConClient();
+
+            //WebApiConClient WebApiFunc = new WebApiConClient();
+
+            RestSharpRequest RestSharpFunc = new RestSharpRequest();
+            OtherHttpRequest ComposAndRequest = new OtherHttpRequest();
             string[] NameInput = { NameOne.Text, NameTwo.Text, NameThr.Text, NameFour.Text };
             string[] AgeInput = { AgeOne.Text, AgeTwo.Text, AgeThr.Text, AgeFour.Text };
             List<string> Name = new List<string>();
@@ -1187,30 +1188,30 @@ namespace WinForm
 
 
             //SimpleBinding
-            SimpleBinding(Name,Age, DoFunc, WebClientFunc,RestSharpFunc,WebApiFunc);
+            SimpleBinding(Name,Age,RestSharpFunc, ComposAndRequest);
 
 
             //ModelBinObj
-            ModelBindObj(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
+            ModelBindObj(Name, Age, RestSharpFunc, ComposAndRequest);
 
 
-            //////SimpleModelBindArray
-            //SimpleModelBindingArray(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
+            ////SimpleModelBindArray
+            SimpleModelBindingArray(Name, Age,RestSharpFunc, ComposAndRequest);
 
 
-            //////ModelBindingArray
-            //ModelBindingArray(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
+            //ModelBindingArray
+            ModelBindingArray(Name, Age,RestSharpFunc, ComposAndRequest);
 
-            //////ModelBindingNestedObj
-            //ModelBindingNestedObj(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
+            //ModelBindingNestedObj
+            ModelBindingNestedObj(Name, Age,RestSharpFunc, ComposAndRequest);
 
 
-            //////ModelBindingArrayNestedObj
-            //ModelBindingArrayNestedObj(Name, Age, DoFunc, WebClientFunc, RestSharpFunc);
+            //ModelBindingArrayNestedObj
+            ModelBindingArrayNestedObj(Name, Age,RestSharpFunc, ComposAndRequest);
 
         }
 
-        private void SimpleBinding(List<string> Name,List<string> Age, HttpClientClient HttpClientFunc,WebClientClient WebClientFunc, RestSharpClient RestSharpFunc, WebApiConClient WebApiFunc)
+        private void SimpleBinding(List<string> Name,List<string> Age, RestSharpRequest RestSharpFunc, OtherHttpRequest ComposAndRequest)
         {
             try
             {
@@ -1218,27 +1219,23 @@ namespace WinForm
                 Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleBinding");
                 //Uri WebApiBaseURL = new Uri("https://localhost:44376/api/WebApiContribPackage/SimpleBinding");
 
-                using (HttpClient client = new HttpClient())
-                {
+
                     // HttpClient
-                    SimpleBindingHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL,"SimpleBinding", "application/x-www-form-urlencoded", client);
-                    SimpleBindingHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL,"SimpleBinding", "application/json",client);
-                }
-
-                using (WebClient client = new WebClient())
-                {
+                    SimpleBindingHttpClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleBinding", "application/x-www-form-urlencoded", "HttpClient");
+                    SimpleBindingHttpClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleBinding", "application/json", "HttpClient");
+                
                     // WebClient
-                    SimpleBindingWebClientURL.Text = WebClientFunc.QueryString(Name, Age, "SimpleBinding", "application/x-www-form-urlencoded", BaseURL,client);
-                    SimpleBindingWebClientJSON.Text = WebClientFunc.QueryString(Name, Age, "SimpleBinding", "application/json", BaseURL,client);
-                }
+                    SimpleBindingWebClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleBinding", "application/x-www-form-urlencoded", "WebClient");
+                    SimpleBindingWebClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleBinding", "application/json", "WebClient");
 
-                //// RestCSharp
-                //SimpleBindingRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL);
-                //SimpleBindingRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL);
+
+                // RestCSharp
+                SimpleBindingRestCSharpURL.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "SimpleBinding", "application/x-www-form-urlencoded");
+                SimpleBindingRestCSharpJSON.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "SimpleBinding", "application/json");
 
                 // WebApiContrib
-                //SimpleBindingWebApiContribURL.Text = WebApiFunc.QueryString(Name, Age, WebApiBaseURL, "application/x-www-form-urlencoded");
-                //SimpleBindingWebApiContribJSON.Text = WebApiFunc.QueryString(Name, Age, WebApiBaseURL, "application/json");
+                //SimpleBindingWebApiContribURL.Text = WebApiFunc.ComposeQueryString(Name, Age, WebApiBaseURL, "application/x-www-form-urlencoded");
+                //SimpleBindingWebApiContribJSON.Text = WebApiFunc.ComposeQueryString(Name, Age, WebApiBaseURL, "application/json");
 
             }
             catch (Exception error)
@@ -1247,28 +1244,23 @@ namespace WinForm
             }
         }
 
-        private void ModelBindObj(List<string> Name, List<string> Age, HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
+        private void ModelBindObj(List<string> Name, List<string> Age,RestSharpRequest RestSharpFunc, OtherHttpRequest ComposAndRequest)
         {
             try
             {
                 Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindObj");
 
-                using (HttpClient client = new HttpClient())
-                {
                     // HttpClient
-                    ModelBindingObjHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindObj", "application/x-www-form-urlencoded", client);
-                    ModelBindingObjHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindObj", "application/json", client);
-                }
-
-                using (WebClient client = new WebClient())
-                {
+                    ModelBindingObjHttpClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindObj", "application/x-www-form-urlencoded", "HttpClient");
+                    ModelBindingObjHttpClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindObj", "application/json", "HttpClient");
+                
                     // WebClient
-                    ModelBindingObjWebClientURL.Text = WebClientFunc.QueryString(Name, Age, "ModelBindObj", "application/x-www-form-urlencoded", BaseURL, client);
-                    ModelBindingObjWebClientJSON.Text = WebClientFunc.QueryString(Name, Age, "ModelBindObj", "application/json", BaseURL, client);
-                }
-                //// RestCSharp
-                //ModelBindingObjRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL);
-                //ModelBindingObjRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL);
+                    ModelBindingObjWebClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindObj", "application/x-www-form-urlencoded", "WebClient");
+                    ModelBindingObjWebClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindObj", "application/json","WebClient");
+
+                    // RestCSharp
+                    ModelBindingObjRestCSharpURL.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindObj", "application/x-www-form-urlencoded");
+                    ModelBindingObjRestCSharpJSON.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindObj", "application/json");
             }
             catch (Exception error)
             {
@@ -1277,119 +1269,108 @@ namespace WinForm
 
         }
 
-        //private void SimpleModelBindingArray(List<string> Name, List<string> Age, HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
-        //{
-        //    try
-        //    {
-        //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray");
+        private void SimpleModelBindingArray(List<string> Name, List<string> Age, RestSharpRequest RestSharpFunc, OtherHttpRequest ComposAndRequest)
+        {
+            try
+            {
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/SimpleModelBindArray");
 
-        //        using (HttpClient client = new HttpClient())
-        //        {
-        //            /// HttpClient
-        //            SimpleModelBindArrayHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/x-www-form-urlencoded", client);
-        //            SimpleModelBindArrayHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/json", client);
-        //        }
+      
+                    // HttpClient
+                    SimpleModelBindArrayHttpClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/x-www-form-urlencoded", "HttpClient");
+                    SimpleModelBindArrayHttpClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/json", "HttpClient");
+                
+                    // WebClient
+                    SimpleModelBindArrayWebClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/x-www-form-urlencoded", "WebClient");
+                    SimpleModelBindArrayWebClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/json", "WebClient");
 
-        //        //// WebClient
-        //        SimpleModelBindArrayWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "SimpleModelBindingArray");
-        //        SimpleModelBindArrayWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "SimpleModelBindingArrayJSON");
+                    // RestCSharp
+                    SimpleModelBindArrayRestCSharpURL.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/x-www-form-urlencoded");
+                    SimpleModelBindArrayRestCSharpJSON.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "SimpleModelBindingArray", "application/json");
+            
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
+            }
+        }
 
+        private void ModelBindingArray(List<string> Name, List<string> Age, RestSharpRequest RestSharpFunc, OtherHttpRequest ComposAndRequest)
+        {
+            try
+            {
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
 
-        //        // RestCSharp
-        //        SimpleModelBindArrayRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "SimpleModelBindingArray");
-        //        SimpleModelBindArrayRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "SimpleModelBindingArrayJSON");
-        //    }
-        //    catch (Exception error)
-        //    {
-        //        Console.WriteLine("{0}", error.Message);
-        //    }
-        //}
+              
+                    // HttpClient
+                    ModelBindingArrayHttpClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArray", "application/x-www-form-urlencoded", "HttpClient");
+                    ModelBindingArrayHttpClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArray", "application/json", "HttpClient");
+                
+                    // WebClient
+                    ModelBindingArrayWebClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArray", "application/x-www-form-urlencoded", "WebClient");
+                    ModelBindingArrayWebClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArray", "application/json", "WebClient");
 
-        //private void ModelBindingArray(List<string> Name, List<string> Age, HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
-        //{
-        //    try
-        //    {
-        //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArray");
+                // RestCSharp
+                ModelBindingArrayRestCSharpURL.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArray", "application/x-www-form-urlencoded");
+                ModelBindingArrayRestCSharpJSON.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArray", "application/json");
 
-        //        using (HttpClient client = new HttpClient())
-        //        {
-        //            // HttpClient
-        //            ModelBindingArrayHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArray", "application/x-www-form-urlencoded", client);
-        //            ModelBindingArrayHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArray", "application/json", client);
-        //        }
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
+            }
+        }
 
-        //        // WebClient
-        //        ModelBindingArrayWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "ModelBindingArray");
-        //        ModelBindingArrayWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "ModelBindingArrayJSON");
+        private void ModelBindingNestedObj(List<string> Name, List<string> Age,RestSharpRequest RestSharpFunc, OtherHttpRequest ComposAndRequest)
+        {
 
-        //        // RestCSharp
-        //        ModelBindingArrayRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingArray");
-        //        ModelBindingArrayRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingArray");
+            try
+            {
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
 
-        //    }
-        //    catch (Exception error)
-        //    {
-        //        Console.WriteLine("{0}", error.Message);
-        //    }
-        //}
+                // HttpClient
+                ModelBindingNestedObjHttpClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/x-www-form-urlencoded", "HttpClient");
+                ModelBindingNestedObjHttpClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/json", "HttpClient");
 
-        //private void ModelBindingNestedObj(List<string> Name, List<string> Age,HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
-        //{
+                // WebClient
+                ModelBindingNestedObjWebClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/x-www-form-urlencoded", "WebClient");
+                ModelBindingNestedObjWebClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/json", "WebClient");
 
-        //    try
-        //        {
-        //            Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingNestedObj");
+                // RestCSharp
+                ModelBindingNestedObjRestCSharpURL.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/x-www-form-urlencoded");
+                ModelBindingNestedObjRestCSharpJSON.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/json");
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
+            }
 
-        //        using (HttpClient client = new HttpClient())
-        //        {
-        //            // HttpClient
-        //            ModelBindingNestedObjHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/x-www-form-urlencoded", client);
-        //            ModelBindingNestedObjHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingNestedObj", "application/json", client);
-        //        }
+        }
 
-        //            // WebClient
-        //            ModelBindingNestedObjWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "ModelBindingNestedObj");
-        //            ModelBindingNestedObjWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "ModelBindingNestedObjJSON");
+        private void ModelBindingArrayNestedObj(List<string> Name, List<string> Age, RestSharpRequest RestSharpFunc, OtherHttpRequest ComposAndRequest)
+        {
+            try
+            {
+                Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
 
-
-        //            // RestCSharp
-        //            ModelBindingNestedObjRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingNestedObj");
-        //            ModelBindingNestedObjRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingNestedObj");
-        //    }
-        //        catch (Exception error)
-        //        {
-        //            Console.WriteLine("{0}", error.Message);
-        //        }
-
-        //}
-
-        //private void ModelBindingArrayNestedObj(List<string> Name, List<string> Age,HttpClientClient HttpClientFunc, WebClientClient WebClientFunc, RestSharpClient RestSharpFunc)
-        //{
-        //    try
-        //    {
-        //        Uri BaseURL = new Uri("https://localhost:44376/api/Home/ModelBindingArrayNestedObj");
-
-        //        using (HttpClient client = new HttpClient())
-        //        {
-        //            // HttpClient
-        //            ModelBindingArrayNestedObjHttpClientURL.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/x-www-form-urlencoded", client);
-        //            ModelBindingArrayNestedObjHttpClientJSON.Text = HttpClientFunc.QueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/json", client);
-        //        }
-
-        //        // WebClient
-        //        ModelBindingArrayNestedObjWebClientURL.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/x-www-form-urlencoded", "ModelBindingArrayNestedObj");
-        //        ModelBindingArrayNestedObjWebClientJSON.Text = WebClientFunc.PostData(Name, Age, BaseURL, "application/json", "ModelBindingArrayNestedObjJSON");
+                // HttpClient
+                ModelBindingArrayNestedObjHttpClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/x-www-form-urlencoded", "HttpClient");
+                ModelBindingArrayNestedObjHttpClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/json", "HttpClient");
 
 
-        //        // RestCSharp
-        //        ModelBindingArrayNestedObjRestCSharpURL.Text = RestSharpFunc.PostURL(Name, Age, BaseURL, "ModelBindingArrayNestedObj");
-        //        ModelBindingArrayNestedObjRestCSharpJSON.Text = RestSharpFunc.PostJSON(Name, Age, BaseURL, "ModelBindingArrayNestedObj");
-        //    }
-        //    catch (Exception error)
-        //    {
-        //        Console.WriteLine("{0}", error.Message);
-        //    }
-        //}
+                // WebClient
+                ModelBindingArrayNestedObjWebClientURL.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/x-www-form-urlencoded", "WebClient");
+                ModelBindingArrayNestedObjWebClientJSON.Text = ComposAndRequest.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/json", "WebClient");
+
+                // RestCSharp
+                ModelBindingArrayNestedObjRestCSharpURL.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/x-www-form-urlencoded");
+                ModelBindingArrayNestedObjRestCSharpJSON.Text = RestSharpFunc.ComposeQueryString(Name, Age, BaseURL, "ModelBindingArrayNestedObj", "application/json");
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
+            }
+        }
 
 
 

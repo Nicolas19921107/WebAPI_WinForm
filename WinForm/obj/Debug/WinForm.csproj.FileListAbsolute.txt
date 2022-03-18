@@ -49,3 +49,4 @@ D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\Antlr3.Runtime.pdb
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\RestSharp.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\RestSharp.xml
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\bin\Debug\WebApiContrib.dll
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WinForm\obj\Debug\WinForm.csproj.CopyComplete

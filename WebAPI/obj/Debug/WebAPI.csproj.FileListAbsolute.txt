@@ -115,3 +115,4 @@ D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.Threading.Tasks.Extens
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\System.ValueTuple.xml
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\WebApiContrib.dll
 D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\bin\RestSharp.dll
+D:\A11126\Desktop\訓練\ASP.NET\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.AssemblyReference.cache
