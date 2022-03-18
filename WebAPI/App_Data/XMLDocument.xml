@@ -589,6 +589,94 @@
             <returns>123</returns>
             <response code="200">回傳成功</response>
         </member>
+        <member name="T:WebAPI.Models.RestSharpRequest">
+            <summary>
+            RestSharp 套件
+            </summary>
+        </member>
+        <member name="M:WebAPI.Models.RestSharpRequest.ComposeQueryString(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.String,System.String)">
+            <summary>
+            組合 QueryString( RestSharp 套件 )
+            </summary>
+            <param name="Name">姓名</param>
+            <param name="Age">年齡</param>
+            <param name="BaseURL">串接 APi 的 BaseURL</param>
+            <param name="ActionName">Controller 的 Action</param>
+            <param name="ContentType">Request 的發送格式</param>
+            <returns>PostData 回傳的結果</returns>
+        </member>
+        <member name="M:WebAPI.Models.RestSharpRequest.PostData(RestSharp.RestRequest,System.String)">
+            <summary>
+            向 Controller 發送資料
+            </summary>
+            <param name="request">RestSharp 呼叫</param>
+            <param name="BaseURL">串接 APi 的 BaseURL</param>
+            <returns>後端回傳的內容</returns>
+        </member>
+        <member name="T:WebAPI.Models.OtherHttpRequest">
+            <summary>
+            其他連線套件( HttpClient 與 WebClient )
+            </summary>
+        </member>
+        <member name="M:WebAPI.Models.OtherHttpRequest.ComposeQueryString(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            組合 QueryString( HttpClient 與 WebClient 套件 )
+            </summary>
+            <param name="Name">姓名</param>
+            <param name="Age">年齡</param>
+            <param name="BaseURL">串接 APi 的 BaseURL</param>
+            <param name="ActionName">Controller 的 Action</param>
+            <param name="ContentType">Request 的發送格式</param>
+            <param name="RequestHTTP">指定使用的連線套件( HttpClient 或 WebClient )</param>
+            <returns>PostData 回傳的結果</returns>
+        </member>
+        <member name="M:WebAPI.Models.OtherHttpRequest.PostData(System.String,System.String,System.String,System.String)">
+            <summary>
+            向後端發送資料
+            </summary>
+            <param name="QueryString">要送給後端的查詢參數</param>
+            <param name="URL">串接 APi 的 BaseURL</param>
+            <param name="ContentType">Request 的發送格式</param>
+            <param name="RequestHTTP">指定使用的連線套件( HttpClient 或 WebClient )</param>
+            <returns>後端回傳的內容</returns>
+        </member>
+        <member name="T:WebAPI.Models.ComplexType">
+            <summary>
+            要處理的複雜型別資料
+            </summary>
+        </member>
+        <member name="M:WebAPI.Models.ComplexType.ForHuman(System.String,System.String)">
+            <summary>
+            Human 類別
+            </summary>
+            <param name="Name">姓名</param>
+            <param name="Age">年齡</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Models.ComplexType.ForListHuman(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Human List
+            </summary>
+            <param name="Name">姓名的 List</param>
+            <param name="Age">年齡的 List</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Models.ComplexType.ForPerson(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Person 類別
+            </summary>
+            <param name="Name">姓名的 List </param>
+            <param name="Age">年齡的 List </param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Models.ComplexType.ForListPerson(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Person List
+            </summary>
+            <param name="Name">姓名的 List</param>
+            <param name="Age">年齡的 List</param>
+            <returns></returns>
+        </member>
         <member name="T:WebAPI.Models.Human">
             <summary>
             Human 類別
